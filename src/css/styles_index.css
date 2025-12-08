@@ -1,0 +1,214 @@
+/* Fondo general de la app */
+.fondo-aplicacion {
+    background-color: #f1f5f9;
+}
+
+/* Botones de menú */
+.boton-menu-inactivo {
+    color: #475569 !important;
+    background-color: transparent !important;
+    transition: all 0.2s ease-in-out;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 1.1rem;
+}
+
+.boton-menu-inactivo:hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+/* Enlace activo en navbar */
+.enlace-activo {
+    color: #1f2937 !important;
+    font-weight: 700;
+    position: relative;
+    background-color: transparent !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 1.1rem;
+}
+
+.enlace-activo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background-color: #1f2937;
+    border-radius: 9999px;
+}
+
+/* Dropdown de Bootstrap (solo estilos visuales) */
+.dropdown-menu {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de sección tipo píldora */
+.titulo-seccion-pildora {
+    background-color: transparent;
+    color: #0f172a !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0 !important;
+    box-shadow: none;
+    text-align: center;
+}
+
+.fila-titulo {
+    margin-bottom: 1rem !important;
+}
+
+/* Placeholder de tarjeta (no se usa actualmente, pero preparado) */
+.marco-contenido-tarjeta {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: #475569;
+    background-color: transparent;
+    border: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+/* Tarjetas de datos */
+.tarjeta-dato {
+    min-height: 150px;
+}
+
+.dato-valor {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1e40af;
+    line-height: 1;
+}
+
+.dato-subtitulo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 0.5rem;
+}
+
+.dato-nota {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.resaltado-exito {
+    color: #10b981;
+}
+
+.resaltado-riesgo {
+    color: #ef4444;
+}
+
+.barra-progreso-personalizada {
+    height: 20px;
+    border-radius: 4px;
+}
+
+/* Carrusel */
+.carousel-item img {
+    height: 600px; /* ALTURA DUPLICADA */
+    object-fit: cover;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #1e40af;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Imagen dentro del 14.x */
+.imagen-subapartado {
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+    border-radius: 4px;
+    background-color: #f8fafc;
+    padding: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos sub-apartados */
+.sub-apartado-titulo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1e40af;
+    text-align: center;
+}
+
+/* Caja de introducción */
+.caja-intro {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #f97316;
+}
+
+.caja-intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.caja-intro .llamado-accion {
+    font-weight: 700;
+    color: #1e40af;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Contenedor apartado 14 */
+.contenedor-apartado-14 {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+}
+
+/* Sub-apartados llamativos */
+.tarjeta-subapartado {
+    display: block;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    height: 100%;
+}
+
+.tarjeta-subapartado:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.tarjeta-subapartado h6 {
+    transition: color 0.3s ease;
+    color: #1e40af;
+}
+
+.tarjeta-subapartado:hover h6 {
+    color: #f97316;
+}
+
+.contenedor-icono-subapartado {
+    background-color: #f0f2f4;
+    border-radius: 8px;
+    padding: 8px;
+}
