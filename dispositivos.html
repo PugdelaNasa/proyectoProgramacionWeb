@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matiliztli Metrics</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <!-- Hoja de estilos propia -->
+    <link rel="stylesheet" href="src/css/styles_dispositivos.css">
+</head>
+<body class="fondo-aplicacion">
+
+    <!-- Header como Navbar -->
+    <header class="bg-white border-bottom border-light shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light container-fluid px-4 px-sm-6 px-lg-8 py-2">
+            <a class="navbar-brand p-0 d-flex align-items-center gap-3" href="#">
+                <div>
+                    <!-- Logo placeholder -->
+                    <img src="src/img/logo.png" alt="Logo de Matiliztli Metrics" width="150" height="100" class="img-fluid" />
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav d-flex align-items-md-center gap-2 py-2 py-md-0">
+                    <button class="btn btn-sm boton-menu-inactivo nav-item">
+                        <span>Inicio</span>
+                    </button>
+
+                    <div class="nav-item dropdown">
+                        <button class="btn btn-sm boton-menu-inactivo dropdown-toggle enlace-activo"
+                                id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <span>Gráficos</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item enlace-menu" href="internet.html">DISPONIBILIDAD Y USO DE INTERNET</a></li>
+                            <li><a class="dropdown-item enlace-menu" href="celulares.html">DISPONIBILIDAD Y USO DE TELÉFONO CELULAR</a></li>
+                            <li><a class="dropdown-item enlace-menu" href="dispositivos.html">DISPOSITIVOS INTELIGENTES EN LOS HOGARES</a></li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-sm boton-menu-inactivo nav-item">
+                        <span>Acerca de</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container-fluid px-4 px-sm-6 px-lg-8 py-4">
+        <!-- Título principal -->
+        <div class="row mb-4 fila-titulo">
+            <div class="col-12">
+                <h2 class="titulo-seccion-pildora">Disponibilidad y Dispositivos en Hogares</h2>
+            </div>
+        </div>
+
+        <!-- Fila 1: GRÁFICA HOGARES CON COMPUTADORA -->
+        <div class="row g-4 mt-1">
+            <div class="col-12">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Evolución de Hogares con Computadora (2020 a 2023)</h5>
+                        <p class="card-text text-muted">Porcentaje y valor absoluto de hogares con computadora.</p>
+                        
+                        <div class="contenedor-grafica-barra">
+                            
+                            <!-- 2020: 43.8% | 15.6 millones. Altura 280px -->
+                            <div class="grupo-barra">
+                                <div class="barra-valor bar-2020" style="height: 280px;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="15.6 millones" data-bs-title="2020: 43.8%">
+                                     <span class="etiqueta-superior" style="color: #0f172a;">43.8</span>
+                                     <span class="etiqueta-inferior">15.6 millones</span>
+                                </div>
+                                <span class="eje-anual">2020</span>
+                            </div>
+
+                            <!-- 2021: 44.8% ▲ | 16.4 millones. Altura 286px -->
+                            <div class="grupo-barra">
+                                <div class="barra-valor bar-2021" style="height: 286px;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="16.4 millones" data-bs-title="2021: 44.8% ▲">
+                                     <span class="etiqueta-superior" style="color: #0f172a;">44.8<span class="indicador-incremento">▲</span></span>
+                                     <span class="etiqueta-inferior">16.4 millones</span>
+                                </div>
+                                <span class="eje-anual">2021</span>
+                            </div>
+
+                            <!-- 2022: 43.9% | 16.5 millones. Altura 281px -->
+                            <div class="grupo-barra">
+                                <div class="barra-valor bar-2022" style="height: 281px;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="16.5 millones" data-bs-title="2022: 43.9%">
+                                     <span class="etiqueta-superior" style="color: #0f172a;">43.9</span>
+                                     <span class="etiqueta-inferior">16.5 millones</span>
+                                </div>
+                                <span class="eje-anual">2022</span>
+                            </div>
+
+                            <!-- 2023: 43.8% | 16.9 millones. Altura 280px -->
+                            <div class="grupo-barra">
+                                <div class="barra-valor bar-2023" style="height: 280px;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="16.9 millones" data-bs-title="2023: 43.8%">
+                                     <span class="etiqueta-superior" style="color: #0f172a;">43.8</span>
+                                     <span class="etiqueta-inferior">16.9 millones</span>
+                                </div>
+                                <span class="eje-anual">2023</span>
+                            </div>
+                        </div>
+                        <p class="card-text text-end text-muted small pt-3 mb-0">Fuente: INEGI, ENDUTIH, 2020 a 2023.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Fila 2 -->
+        <div class="row g-4 mt-1">
+            <!-- 2. GRÁFICA EQUIPOS POR HOGAR -->
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Promedio y Tipo de Equipos por Hogar (2023)</h5>
+                        <p class="card-text text-muted small">Porcentaje de hogares con cada tipo de equipo y su promedio.</p>
+                        
+                        <div class="contenedor-grafica-equipo-h">
+                            
+                            <!-- Laptop (77.1% - Máx valor) -->
+                            <div class="barra-equipo-item">
+                                <span class="etiqueta-equipo-h">Laptop</span>
+                                <div class="barra-principal-h">
+                                    <div class="barra-valor-h" style="width: 77.1%; background-color: #06b6d4;"
+                                         data-bs-toggle="popover" data-bs-placement="right"
+                                         data-bs-content="Promedio: 1.3" data-bs-title="Laptop: 77.1%">
+                                        <span class="etiqueta-centro-h">Promedio por hogar: 1.3</span>
+                                    </div>
+                                    <span class="etiqueta-lado-h">77.1%</span>
+                                </div>
+                            </div>
+
+                            <!-- Tablet (37.0%) -->
+                            <div class="barra-equipo-item">
+                                <span class="etiqueta-equipo-h">Tablet</span>
+                                <div class="barra-principal-h">
+                                    <div class="barra-valor-h" style="width: 37.0%; background-color: #3b82f6;"
+                                         data-bs-toggle="popover" data-bs-placement="right"
+                                         data-bs-content="Promedio: 1.2" data-bs-title="Tablet: 37.0%">
+                                        <span class="etiqueta-centro-h">Promedio por hogar: 1.2</span>
+                                    </div>
+                                    <span class="etiqueta-lado-h">37.0%</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Computadora de escritorio (28.4% ▼) -->
+                            <div class="barra-equipo-item">
+                                <span class="etiqueta-equipo-h">Computadora de escritorio</span>
+                                <div class="barra-principal-h">
+                                    <div class="barra-valor-h rojo" style="width: 28.4%; background-color: #ef4444;"
+                                         data-bs-toggle="popover" data-bs-placement="right"
+                                         data-bs-content="Promedio: 1.1" data-bs-title="Escritorio: 28.4% ▼">
+                                        <span class="etiqueta-centro-h">Promedio por hogar: 1.1</span>
+                                    </div>
+                                    <span class="etiqueta-lado-h">28.4% <span class="indicador-h dec">▼</span></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p class="card-text text-end text-muted small pt-3 mb-0">Nota: Hogares pueden tener varios tipos de computadora.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. GRÁFICA DISPOSITIVOS INTELIGENTES -->
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body" style="min-height: 400px;">
+                        <h5 class="card-title text-dark">Dispositivos Inteligentes en el Hogar (2023)</h5>
+                        <p class="card-text text-muted small">Porcentaje de hogares con cada tipo de dispositivo conectado.</p>
+                        
+                        <div class="contenedor-grafica-dispositivos">
+                            
+                            <!-- Bocina o asistente del hogar (63.7%) -->
+                            <div class="dispositivo-barra-item">
+                                <span class="dispositivo-etiqueta">Bocina o asistente</span>
+                                <div class="dispositivo-barra-fondo">
+                                    <div class="dispositivo-barra-valor" style="width: 63.7%; background-color: #06b6d4;"
+                                         data-bs-toggle="popover" data-bs-placement="left"
+                                         data-bs-content="63.7% de hogares" data-bs-title="Bocina">
+                                        <span class="dispositivo-valor">63.7</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sistemas de videovigilancia (34.8%) -->
+                            <div class="dispositivo-barra-item">
+                                <span class="dispositivo-etiqueta">Sistemas de videovigilancia</span>
+                                <div class="dispositivo-barra-fondo">
+                                    <div class="dispositivo-barra-valor" style="width: 34.8%; background-color: #0ea5e9;"
+                                         data-bs-toggle="popover" data-bs-placement="left"
+                                         data-bs-content="34.8% de hogares" data-bs-title="Videovigilancia">
+                                        <span class="dispositivo-valor">34.8</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dispositivos de entretenimiento (24.7%) -->
+                            <div class="dispositivo-barra-item">
+                                <span class="dispositivo-etiqueta">Dispositivos de entretenimiento</span>
+                                <div class="dispositivo-barra-fondo">
+                                    <div class="dispositivo-barra-valor" style="width: 24.7%; background-color: #3b82f6;"
+                                         data-bs-toggle="popover" data-bs-placement="left"
+                                         data-bs-content="24.7% de hogares" data-bs-title="Entretenimiento">
+                                        <span class="dispositivo-valor">24.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Luces o interruptores (13.9%) -->
+                            <div class="dispositivo-barra-item">
+                                <span class="dispositivo-etiqueta">Luces o interruptores</span>
+                                <div class="dispositivo-barra-fondo">
+                                    <div class="dispositivo-barra-valor" style="width: 13.9%; background-color: #4c1d95;"
+                                         data-bs-toggle="popover" data-bs-placement="left"
+                                         data-bs-content="13.9% de hogares" data-bs-title="Luces">
+                                        <span class="dispositivo-valor">13.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Conexión eléctrica (7.0%) -->
+                            <div class="dispositivo-barra-item">
+                                <span class="dispositivo-etiqueta">Conexión eléctrica</span>
+                                <div class="dispositivo-barra-fondo">
+                                    <div class="dispositivo-barra-valor" style="width: 7.0%; background-color: #6d28d9;"
+                                         data-bs-toggle="popover" data-bs-placement="left"
+                                         data-bs-content="7.0% de hogares" data-bs-title="Eléctrica">
+                                        <span class="dispositivo-valor" style="color: #0f172a;">7.0</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Electrodomésticos (6.4%) -->
+                            <div class="dispositivo-barra-item">
+                                <span class="dispositivo-etiqueta">Electrodomésticos</span>
+                                <div class="dispositivo-barra-fondo">
+                                    <div class="dispositivo-barra-valor" style="width: 6.4%; background-color: #94a3b8;"
+                                         data-bs-toggle="popover" data-bs-placement="left"
+                                         data-bs-content="6.4% de hogares" data-bs-title="Electrodomésticos">
+                                        <span class="dispositivo-valor" style="color: #0f172a;">6.4</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Puertas o ventanas (4.5%) -->
+                            <div class="dispositivo-barra-item">
+                                <span class="dispositivo-etiqueta">Puertas o ventanas</span>
+                                <div class="dispositivo-barra-fondo">
+                                    <div class="dispositivo-barra-valor" style="width: 4.5%; background-color: #94a3b8;"
+                                         data-bs-toggle="popover" data-bs-placement="left"
+                                         data-bs-content="4.5% de hogares" data-bs-title="Puertas/Ventanas">
+                                        <span class="dispositivo-valor" style="color: #0f172a;">4.5</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Automóvil o camioneta (3.7%) -->
+                            <div class="dispositivo-barra-item">
+                                <span class="dispositivo-etiqueta">Automóvil o camioneta</span>
+                                <div class="dispositivo-barra-fondo">
+                                    <div class="dispositivo-barra-valor" style="width: 3.7%; background-color: #94a3b8;"
+                                         data-bs-toggle="popover" data-bs-placement="left"
+                                         data-bs-content="3.7% de hogares" data-bs-title="Automóvil">
+                                        <span class="dispositivo-valor" style="color: #0f172a;">3.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Termostato (3.2%) -->
+                            <div class="dispositivo-barra-item">
+                                <span class="dispositivo-etiqueta">Termostato/Ahorro eléctrico</span>
+                                <div class="dispositivo-barra-fondo">
+                                    <div class="dispositivo-barra-valor" style="width: 3.2%; background-color: #94a3b8;"
+                                         data-bs-toggle="popover" data-bs-placement="left"
+                                         data-bs-content="3.2% de hogares" data-bs-title="Termostato">
+                                        <span class="dispositivo-valor" style="color: #0f172a;">3.2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <p class="card-text text-end text-muted small pt-3 mb-0">Fuente: INEGI, ENDUTIH, 2023.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 3 -->
+        <div class="row g-4 mt-1">
+            <!-- 5. GRÁFICA APILADA CELULAR -->
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Evolución Celular: Tipo de Equipo</h5>
+                        <p class="card-text small text-muted">Distribución porcentual por año.</p>
+
+                        <div class="contenedor-grafica-apilada">
+                            
+                            <!-- Columna 2020 -->
+                            <div class="barra-apilada-columna">
+                                <div class="barra-segmento barra-segmento-comun" style="height: 8.2%;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="Común: 8.2%" data-bs-title="2020">
+                                    <span class="etiqueta-segmento-valor">8.2</span>
+                                </div>
+                                <div class="barra-segmento barra-segmento-sm" style="height: 91.8%;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="Smartphone: 91.8%" data-bs-title="2020">
+                                    <span class="etiqueta-segmento-valor">91.8</span>
+                                    <span class="indicador-apilado inc" style="top: -15px; left: calc(50% + 5px);">▲</span>
+                                </div>
+                                <span class="etiqueta-columna-anual">2020</span>
+                            </div>
+
+                            <!-- Columna 2021 -->
+                            <div class="barra-apilada-columna">
+                                <div class="barra-segmento barra-segmento-comun" style="height: 5.9%;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="Común: 5.9%" data-bs-title="2021">
+                                    <span class="etiqueta-segmento-valor">5.9</span>
+                                    <span class="indicador-apilado dec" style="top: 2px; left: calc(50% + 5px);">▼</span>
+                                </div>
+                                <div class="barra-segmento barra-segmento-sm" style="height: 94.1%;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="Smartphone: 94.1%" data-bs-title="2021">
+                                    <span class="etiqueta-segmento-valor">94.1</span>
+                                    <span class="indicador-apilado inc" style="top: -15px; left: calc(50% + 5px);">▲</span>
+                                </div>
+                                <span class="etiqueta-columna-anual">2021</span>
+                            </div>
+
+                            <!-- Columna 2022 -->
+                            <div class="barra-apilada-columna">
+                                <div class="barra-segmento barra-segmento-comun" style="height: 5.2%;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="Común: 5.2%" data-bs-title="2022">
+                                    <span class="etiqueta-segmento-valor">5.2</span>
+                                    <span class="indicador-apilado dec" style="top: 2px; left: calc(50% + 5px);">▼</span>
+                                </div>
+                                <div class="barra-segmento barra-segmento-sm" style="height: 94.8%;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="Smartphone: 94.8%" data-bs-title="2022">
+                                    <span class="etiqueta-segmento-valor">94.8</span>
+                                    <span class="indicador-apilado inc" style="top: -15px; left: calc(50% + 5px);">▲</span>
+                                </div>
+                                <span class="etiqueta-columna-anual">2022</span>
+                            </div>
+
+                            <!-- Columna 2023 -->
+                            <div class="barra-apilada-columna">
+                                <div class="barra-segmento barra-segmento-comun" style="height: 4.3%;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="Común: 4.3%" data-bs-title="2023">
+                                    <span class="etiqueta-segmento-valor">4.3</span>
+                                    <span class="indicador-apilado dec" style="top: 2px; left: calc(50% + 5px);">▼</span>
+                                </div>
+                                <div class="barra-segmento barra-segmento-sm" style="height: 95.7%;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="Smartphone: 95.7%" data-bs-title="2023">
+                                    <span class="etiqueta-segmento-valor">95.7</span>
+                                    <span class="indicador-apilado inc" style="top: -15px; left: calc(50% + 5px);">▲</span>
+                                </div>
+                                <span class="etiqueta-columna-anual">2023</span>
+                            </div>
+
+                        </div>
+                        <p class="card-text text-end text-muted small pt-2 mb-0">
+                            Leyenda: <span style="color: #0d9488;">Smartphone</span> / <span style="color: #ef4444;">Común</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 6. GRÁFICA CIRCULAR TV -->
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Hogares con Televisor, Según Tipo de Televisor (2023)</h5>
+                        <p class="card-text text-muted">Distribución porcentual de hogares con Smart TV vs. Televisor convencional.</p>
+                        
+                        <div class="contenedor-grafica-circular">
+                            <div class="grafica-circular-css grafica-circular-tv">
+                                <div class="etiqueta-central-tv">
+                                    Smart TV: <br>68.7%
+                                </div>
+                            </div>
+                            
+                            <div class="leyenda-circular-tv">
+                                <div class="leyenda-item">
+                                    <span class="color-muestra" style="background-color: #0d9488;"></span>
+                                    <span><strong>Sí dispone de Smart TV</strong> (68.7%)</span>
+                                </div>
+                                <div class="leyenda-item">
+                                    <span class="color-muestra" style="background-color: #03045e;"></span>
+                                    <span><strong>No dispone de Smart TV</strong> (30.8%)</span>
+                                </div>
+                                <div class="leyenda-item"
+                                     data-bs-toggle="popover" data-bs-placement="right"
+                                     data-bs-content="El porcentaje es muy pequeño para ser visible en la gráfica." data-bs-title="No Sabe/No Responde">
+                                    <span class="color-muestra" style="background-color: #ef4444;"></span>
+                                    <span><strong>No sabe/No responde</strong> (0.6%)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="card-text text-end text-muted small pt-2 mb-0">
+                            Nota: Promedio de Smart TV por hogar es 1.5. Fuente: INEGI, ENDUTIH, 2023.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 4: TABLA POR ESTADO -->
+        <div class="row g-4 mt-1">
+            <div class="col-12 col-md-12">
+                 <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Penetración de Internet por Entidad Federativa (2023)</h5>
+                        <p class="card-text text-muted">Porcentaje de población usuaria de internet por Estado. La penetración nacional es del <strong>71.7%</strong>.</p>
+                        
+                        <div class="distribucion-tablas-estado">
+                            
+                            <!-- Columna Izquierda de la Tabla -->
+                            <div class="table-responsive">
+                                <table class="tabla-estado-larga">
+                                    <thead>
+                                        <tr><th>Entidad Federativa</th><th>Penetración (%)</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="penet-alto"><td>Ciudad de México</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 89.5%" data-bs-title="Ciudad de México">89.5 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-alto"><td>Baja California</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 86.4%" data-bs-title="Baja California">86.4</td></tr>
+                                        <tr class="penet-medio-alto"><td>Quintana Roo</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 83.6%" data-bs-title="Quintana Roo">83.6 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-medio-alto"><td>Jalisco</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 83.3%" data-bs-title="Jalisco">83.3 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-medio-alto"><td>Aguascalientes</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 81.4%" data-bs-title="Aguascalientes">81.4 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-medio-alto"><td>Sinaloa</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 81.4%" data-bs-title="Sinaloa">81.4</td></tr>
+                                        <tr class="penet-medio"><td>Nuevo León</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 80.6%" data-bs-title="Nuevo León">80.6</td></tr>
+                                        <tr class="penet-medio"><td>Sonora</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 80.3%" data-bs-title="Sonora">80.3</td></tr>
+                                        <tr class="penet-medio"><td>Baja California Sur</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 78.9%" data-bs-title="Baja California Sur">78.9</td></tr>
+                                        <tr class="penet-medio"><td>Coahuila de Zaragoza</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 76.9%" data-bs-title="Coahuila">76.9 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-medio"><td>Querétaro</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 75.9%" data-bs-title="Querétaro">75.9</td></tr>
+                                        <tr class="penet-medio"><td>Colima</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 75.5%" data-bs-title="Colima">75.5</td></tr>
+                                        <tr class="penet-bajo"><td>Chihuahua</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 74.1%" data-bs-title="Chihuahua">74.1</td></tr>
+                                        <tr class="penet-bajo"><td>Morelos</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 74.1%" data-bs-title="Morelos">74.1</td></tr>
+                                        <tr class="penet-bajo"><td>Zacatecas</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 73.9%" data-bs-title="Zacatecas">73.9 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-bajo"><td>México</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 73.4%" data-bs-title="México">73.4</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Columna Derecha de la Tabla -->
+                            <div class="table-responsive">
+                                <table class="tabla-estado-larga">
+                                    <thead>
+                                        <tr><th>Entidad Federativa</th><th>Penetración (%)</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="penet-bajo"><td>Tamaulipas</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 73.2%" data-bs-title="Tamaulipas">73.2 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-bajo"><td>Guanajuato</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 71.7%" data-bs-title="Guanajuato">71.7 <span class="incremento">▲</span></td></tr>
+                                        <tr class="nacional"><td>NACIONAL</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración Nacional: 71.7%" data-bs-title="Nacional">71.7 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-bajo"><td>Campeche</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 70.9%" data-bs-title="Campeche">70.9 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-bajo"><td>Yucatán</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 70.6%" data-bs-title="Yucatán">70.6</td></tr>
+                                        <tr class="penet-muy-bajo"><td>Nayarit</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 69.6%" data-bs-title="Nayarit">69.6 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-muy-bajo"><td>Tabasco</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 68.3%" data-bs-title="Tabasco">68.3 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-muy-bajo"><td>Michoacán de Ocampo</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 65.0%" data-bs-title="Michoacán">65.0 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-muy-bajo"><td>Hidalgo</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 64.8%" data-bs-title="Hidalgo">64.8 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-muy-bajo"><td>Durango</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 64.7%" data-bs-title="Durango">64.7 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-muy-bajo"><td>San Luis Potosí</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 63.5%" data-bs-title="San Luis Potosí">63.5</td></tr>
+                                        <tr class="penet-muy-bajo"><td>Tlaxcala</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 62.7%" data-bs-title="Tlaxcala">62.7 <span class="incremento">▲</span></td></tr>
+                                        <tr class="penet-muy-bajo"><td>Puebla</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 58.3%" data-bs-title="Puebla">58.3</td></tr>
+                                        <tr class="penet-muy-bajo"><td>Veracruz de Ignacio de la Llave</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 58.2%" data-bs-title="Veracruz">58.2</td></tr>
+                                        <tr class="penet-muy-bajo"><td>Guerrero</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 53.9%" data-bs-title="Guerrero">53.9</td></tr>
+                                        <tr class="penet-muy-bajo"><td>Oaxaca</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 53.0%" data-bs-title="Oaxaca">53.0</td></tr>
+                                        <tr class="penet-muy-bajo"><td>Chiapas</td><td data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración: 44.3%" data-bs-title="Chiapas">44.3 <span class="incremento">▲</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <p class="card-text text-end text-muted small pt-3 mb-0">Fuente: Datos basados en ENDUTIH, 2023. (▲ Incremento significativo respecto al año anterior).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 5: Apartados 10 y 11 -->
+        <div class="row g-4 mt-1 pb-5">
+            <!-- Apartado 10 -->
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Tasa de Penetración de Smart TV (2023)</h5>
+                        <p class="card-text text-muted small">Porcentaje de hogares que sí o no disponen de un televisor inteligente.</p>
+                        
+                        <div class="contenedor-grafica-circular">
+                            <div class="grafica-circular-css grafica-circular-tv">
+                                <div class="etiqueta-central-tv">
+                                    Smart TV: <br>68.7%
+                                </div>
+                            </div>
+                            
+                            <div class="leyenda-circular-tv">
+                                <div class="leyenda-item">
+                                    <span class="color-muestra" style="background-color: #0d9488;"></span>
+                                    <span><strong>Sí dispone de Smart TV</strong> (68.7%)</span>
+                                </div>
+                                <div class="leyenda-item">
+                                    <span class="color-muestra" style="background-color: #03045e;"></span>
+                                    <span><strong>No dispone de Smart TV</strong> (30.8%)</span>
+                                </div>
+                                <div class="leyenda-item"
+                                     data-bs-toggle="popover" data-bs-placement="right"
+                                     data-bs-content="El porcentaje es muy pequeño para ser visible en la gráfica." data-bs-title="No Sabe/No Responde">
+                                    <span class="color-muestra" style="background-color: #ef4444;"></span>
+                                    <span><strong>No sabe/No responde</strong> (0.6%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apartado 11 - GRÁFICA TV ABIERTA -->
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Personas Usuarias de Televisión Abierta (2020 a 2023)</h5>
+                        <p class="card-text text-muted small">Porcentaje de personas usuarias y valor absoluto en millones.</p>
+                        
+                        <div class="contenedor-grafica-tv-abierta">
+                            
+                            <!-- 2020: 61.1% | 70.9 millones. Altura 244px -->
+                            <div class="grupo-barra-abierta">
+                                <div class="barra-abierta-valor bar-abierta-clara" style="height: 244px;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="70.9 millones" data-bs-title="2020: 61.1%">
+                                     <span class="etiqueta-superior-abierta">61.1</span>
+                                     <span class="etiqueta-inferior-abierta">70.9 millones</span>
+                                </div>
+                                <span class="eje-anual-abierta">2020</span>
+                            </div>
+
+                            <!-- 2021: 60.1% | 70.4 millones. Altura 240px -->
+                            <div class="grupo-barra-abierta">
+                                <div class="barra-abierta-valor bar-abierta-clara" style="height: 240px;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="70.4 millones" data-bs-title="2021: 60.1%">
+                                     <span class="etiqueta-superior-abierta">60.1</span>
+                                     <span class="etiqueta-inferior-abierta">70.4 millones</span>
+                                </div>
+                                <span class="eje-anual-abierta">2021</span>
+                            </div>
+
+                            <!-- 2022: 56.3% ▼ | 66.6 millones. Altura 225px -->
+                            <div class="grupo-barra-abierta">
+                                <div class="barra-abierta-valor bar-abierta-oscura" style="height: 225px;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="66.6 millones" data-bs-title="2022: 56.3% ▼">
+                                     <span class="etiqueta-superior-abierta">56.3<span class="indicador-abierta">▼</span></span>
+                                     <span class="etiqueta-inferior-abierta">66.6 millones</span>
+                                </div>
+                                <span class="eje-anual-abierta">2022</span>
+                            </div>
+
+                            <!-- 2023: 56.9% | 67.9 millones. Altura 228px -->
+                            <div class="grupo-barra-abierta">
+                                <div class="barra-abierta-valor bar-abierta-oscura" style="height: 228px;"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="67.9 millones" data-bs-title="2023: 56.9%">
+                                     <span class="etiqueta-superior-abierta" style="color: white;">56.9</span>
+                                     <span class="etiqueta-inferior-abierta">67.9 millones</span>
+                                </div>
+                                <span class="eje-anual-abierta">2023</span>
+                            </div>
+                        </div>
+                        <p class="card-text text-end text-muted small pt-3 mb-0">Nota: Promedio de horas vistas al día: 2.3 horas. Fuente: INEGI, ENDUTIH, 2020 a 2023.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS (para popovers y dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicializa todos los popovers en la página.
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl, {
+                    trigger: 'hover',
+                    html: true // Importante para renderizar el contenido
+                });
+            });
+        });
+    </script>
+</body>
+</html>

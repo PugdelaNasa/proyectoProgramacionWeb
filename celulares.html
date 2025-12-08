@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matiliztli Metrics</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <!-- Hoja de estilos propia -->
+    <link rel="stylesheet" href="src/css/styles_celular.css">
+</head>
+<body class="fondo-aplicacion">
+
+    <!-- Header como Navbar -->
+    <header class="bg-white border-bottom border-light shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light container-fluid px-4 px-sm-6 px-lg-8 py-2">
+            <a class="navbar-brand p-0 d-flex align-items-center gap-3" href="#">
+                <div>
+                    <!-- Nota: La imagen del logo.png es un placeholder ya que no se proporciona el archivo -->
+                    <img src="src/img/logo.png" alt="Logo de Matiliztli Metrics" width="150" height="100" class="img-fluid" />
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav d-flex align-items-md-center gap-2 py-2 py-md-0">
+                    <button class="btn btn-sm boton-menu-inactivo nav-item">
+                        <span>Inicio</span>
+                    </button>
+
+                    <div class="nav-item dropdown">
+                        <button class="btn btn-sm boton-menu-inactivo dropdown-toggle enlace-activo"
+                                id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <span>Gráficos</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item enlace-menu" href="internet.html">DISPONIBILIDAD Y USO DE INTERNET</a></li>
+                            <li><a class="dropdown-item enlace-menu" href="celulares.html">DISPONIBILIDAD Y USO DE TELÉFONO CELULAR</a></li>
+                            <li><a class="dropdown-item enlace-menu" href="dispositivos.html">DISPOSITIVOS INTELIGENTES EN LOS HOGARES</a></li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-sm boton-menu-inactivo nav-item">
+                        <span>Acerca de</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container-fluid px-4 px-sm-6 px-lg-8 py-4">
+        <!-- Título -->
+        <div class="row mb-4 fila-titulo">
+            <div class="col-12">
+                <h2 class="titulo-seccion-pildora">Disponibilidad y Uso de Telefono Celular</h2>
+            </div>
+        </div>
+
+        <!-- Fila 3: Gráfica de Teléfono Celular (Ocupa todo el ancho) -->
+        <div class="row g-4 mt-1">
+            <div class="col-12">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Personas Usuarias de Teléfono Celular (2020 a 2023)</h5>
+
+                        <div class="contenedor-grafica-celular">
+                            <!-- 2020: 75.1% | 87.2 millones. Altura base 180px -->
+                            <div class="grupo-barra-celular">
+                                <div class="barra-celular" style="height: 180px; background: linear-gradient(to top, #10b981, #34d399);"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="Porcentaje: 75.1%" data-bs-title="2020: 87.2 Millones">
+                                     <span class="etiqueta-celular-superior">75.1</span>
+                                     <span class="etiqueta-celular-inferior">87.2 millones</span>
+                                </div>
+                                <span class="eje-celular">2020</span>
+                            </div>
+
+                            <!-- 2021: 78.3% | 91.7 millones (Aumento significativo) - Altura 191px -->
+                            <div class="grupo-barra-celular">
+                                <div class="barra-celular" style="height: 191px; background: linear-gradient(to top, #facc15, #fde047);"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="Porcentaje: 78.3%" data-bs-title="2021: 91.7 Millones">
+                                     <span class="etiqueta-celular-superior">78.3<span class="indicador-celular-incremento">▲</span></span>
+                                     <span class="etiqueta-celular-inferior" style="color: #0f172a;">91.7 millones</span>
+                                </div>
+                                <span class="eje-celular">2021</span>
+                            </div>
+
+                            <!-- 2022: 79.2% | 93.8 millones - Altura 195px -->
+                            <div class="grupo-barra-celular">
+                                <div class="barra-celular" style="height: 195px; background: linear-gradient(to top, #fb923c, #fdae61);"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="Porcentaje: 79.2%" data-bs-title="2022: 93.8 Millones">
+                                     <span class="etiqueta-celular-superior">79.2</span>
+                                     <span class="etiqueta-celular-inferior">93.8 millones</span>
+                                </div>
+                                <span class="eje-celular">2022</span>
+                            </div>
+
+                            <!-- 2023: 81.4% | 97.2 millones (Aumento significativo) - Altura 205px -->
+                            <div class="grupo-barra-celular">
+                                <div class="barra-celular" style="height: 205px; background: linear-gradient(to top, #ef4444, #f87171);"
+                                     data-bs-toggle="popover" data-bs-placement="top"
+                                     data-bs-content="Porcentaje: 81.4%" data-bs-title="2023: 97.2 Millones">
+                                     <span class="etiqueta-celular-superior">81.4<span class="indicador-celular-incremento">▲</span></span>
+                                     <span class="etiqueta-celular-inferior">97.2 millones</span>
+                                </div>
+                                <span class="eje-celular">2023</span>
+                            </div>
+                        </div>
+
+                        <p class="text-end text-muted small pt-4 mb-0">
+                            Fuente: INEGI, ENDUTIH, 2020 a 2023.
+                        </p>
+                        <p class="text-muted small mt-2">
+                             <span style="color: #10b981;">▲</span> Incremento estadísticamente significativo respecto al año anterior.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 4: Género por Sexo (GRÁFICA CSS) y Conexión a Internet (GRÁFICA CIRCULAR) -->
+        <div class="row g-4 mt-1">
+            <!-- Género por Sexo (GRÁFICA CSS) -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Personas Usuarias de Internet, según sexo (2020 a 2023)</h5>
+
+                        <div class="contenedor-grafica-genero-horizontal">
+
+                            <!-- 2020 -->
+                            <div class="fila-barra-genero">
+                                <span class="etiqueta-fila-genero">2020</span>
+                                <div class="barra-contenedor-total">
+                                    <div class="barra-genero-h" style="width: 76.0%;"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Hombres: 76.0%" data-bs-title="2020">
+                                         <span class="valor-genero-horizontal">76.0%</span>
+                                    </div>
+                                    <div class="barra-genero-m" style="width: 74.4%; background: linear-gradient(to right, #db2777, #f472b6); z-index: 1; margin-left: 2px;"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Mujeres: 74.4%" data-bs-title="2020">
+                                         <span class="valor-genero-horizontal" style="color: #4c1d95;">74.4%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- 2021 -->
+                            <div class="fila-barra-genero">
+                                <span class="etiqueta-fila-genero">2021</span>
+                                <div class="barra-contenedor-total">
+                                    <div class="barra-genero-h" style="width: 79.0%;"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Hombres: 79.0% (▲)" data-bs-title="2021">
+                                         <span class="valor-genero-horizontal">79.0%<span class="indicador-genero-incremento h" style="right: -10px;">▲</span></span>
+                                    </div>
+                                    <div class="barra-genero-m" style="width: 77.7%; background: linear-gradient(to right, #db2777, #f472b6);"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Mujeres: 77.7% (▲)" data-bs-title="2021">
+                                         <span class="valor-genero-horizontal">77.7%<span class="indicador-genero-incremento m" style="left: -10px;">▲</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- 2022 -->
+                            <div class="fila-barra-genero">
+                                <span class="etiqueta-fila-genero">2022</span>
+                                <div class="barra-contenedor-total">
+                                    <div class="barra-genero-h" style="width: 80.1%;"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Hombres: 80.1% (▲)" data-bs-title="2022">
+                                         <span class="valor-genero-horizontal">80.1%<span class="indicador-genero-incremento h" style="right: -10px;">▲</span></span>
+                                    </div>
+                                    <div class="barra-genero-m" style="width: 78.5%; background: linear-gradient(to right, #db2777, #f472b6);"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Mujeres: 78.5% (▲)" data-bs-title="2022">
+                                         <span class="valor-genero-horizontal">78.5%<span class="indicador-genero-incremento m" style="left: -10px;">▲</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- 2023 -->
+                            <div class="fila-barra-genero">
+                                <span class="etiqueta-fila-genero">2023</span>
+                                <div class="barra-contenedor-total">
+                                    <div class="barra-genero-h" style="width: 81.8%;"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Hombres: 81.8% (▲)" data-bs-title="2023">
+                                         <span class="valor-genero-horizontal">81.8%<span class="indicador-genero-incremento h" style="right: -10px;">▲</span></span>
+                                    </div>
+                                    <div class="barra-genero-m" style="width: 80.9%; background: linear-gradient(to right, #db2777, #f472b6);"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Mujeres: 80.9% (▲)" data-bs-title="2023">
+                                         <span class="valor-genero-horizontal">80.9%<span class="indicador-genero-incremento m" style="left: -10px;">▲</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="leyenda-genero">
+                            <span class="badge" style="background-color: #6366f1;">Hombres</span>
+                            <span class="badge" style="background-color: #f472b6;">Mujeres</span>
+                        </div>
+                        <p class="text-end text-muted small pt-2 mb-0">
+                            Fuente: INEGI, ENDUTIH, 2020 a 2023.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lugar de acceso (GRÁFICA CIRCULAR) - CORREGIDA -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Tipo de Conexión a Internet en Celulares (2023)</h5>
+
+                        <div class="contenedor-grafica-circular">
+                            <div class="grafica-circular-css grafica-circular-conexion">
+                                <div class="etiqueta-central">
+                                    Conexión<br>Internet
+                                </div>
+                            </div>
+
+                            <div class="leyenda-circular">
+                                <div class="leyenda-item">
+                                    <span class="color-muestra" style="background-color: #0ea5e9;"></span>
+                                    <span>**Solo conexión móvil** (74.3%)</span>
+                                </div>
+                                <div class="leyenda-item">
+                                    <span class="color-muestra" style="background-color: #facc15;"></span>
+                                    <span>**Solo WiFi** (13.1%)</span>
+                                </div>
+                                <div class="leyenda-item">
+                                    <span class="color-muestra" style="background-color: #10b981;"></span>
+                                    <span>**Ambos** (12.6%)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-end text-muted small pt-2 mb-0">
+                            Fuente: INEGI, ENDUTIH, 2023.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 5: Tipo de Equipo Celular (GRÁFICA CSS) -->
+        <div class="row g-4 mt-1">
+            <div class="col-12">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Personas Usuarias de Teléfono Celular, Según Tipo de Equipo (2020 a 2023)</h5>
+
+                        <div class="contenedor-grafica-equipo">
+
+                            <!-- 2020 -->
+                            <div class="columna-equipo">
+                                <div class="barra-equipo-contenedor"
+                                     data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true"
+                                     data-bs-content="Smartphone: 91.5%<br>Común: 8.2%" data-bs-title="2020">
+                                    <div class="barra-equipo-sm" style="height: 91.5%;">
+                                        <span class="etiqueta-porcentaje-vertical" style="top: 20px; color: white;">91.5</span>
+                                        <span class="indicador-vertical inc" style="top: 15px; left: calc(50% + 15px);">▲</span>
+                                    </div>
+                                    <div class="barra-equipo-comun" style="height: 8.2%;">
+                                        <span class="etiqueta-porcentaje-vertical" style="top: -15px;">8.2</span>
+                                        <span class="indicador-vertical dec" style="top: -20px; left: calc(50% + 15px);">▼</span>
+                                    </div>
+                                </div>
+                                <span class="eje-equipo">2020</span>
+                            </div>
+
+                            <!-- 2021 -->
+                            <div class="columna-equipo">
+                                <div class="barra-equipo-contenedor"
+                                     data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true"
+                                     data-bs-content="Smartphone: 93.9%<br>Común: 5.9%" data-bs-title="2021">
+                                    <div class="barra-equipo-sm" style="height: 93.9%;">
+                                        <span class="etiqueta-porcentaje-vertical" style="top: 20px; color: white;">93.9</span>
+                                        <span class="indicador-vertical inc" style="top: 15px; left: calc(50% + 15px);">▲</span>
+                                    </div>
+                                    <div class="barra-equipo-comun" style="height: 5.9%;">
+                                        <span class="etiqueta-porcentaje-vertical" style="top: -15px;">5.9</span>
+                                        <span class="indicador-vertical dec" style="top: -20px; left: calc(50% + 15px);">▼</span>
+                                    </div>
+                                </div>
+                                <span class="eje-equipo">2021</span>
+                            </div>
+
+                            <!-- 2022 -->
+                            <div class="columna-equipo">
+                                <div class="barra-equipo-contenedor"
+                                     data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true"
+                                     data-bs-content="Smartphone: 94.6%<br>Común: 5.2%" data-bs-title="2022">
+                                    <div class="barra-equipo-sm" style="height: 94.6%;">
+                                        <span class="etiqueta-porcentaje-vertical" style="top: 20px; color: white;">94.6</span>
+                                        <span class="indicador-vertical inc" style="top: 15px; left: calc(50% + 15px);">▲</span>
+                                    </div>
+                                    <div class="barra-equipo-comun" style="height: 5.2%;">
+                                        <span class="etiqueta-porcentaje-vertical" style="top: -15px;">5.2</span>
+                                        <span class="indicador-vertical dec" style="top: -20px; left: calc(50% + 15px);">▼</span>
+                                    </div>
+                                </div>
+                                <span class="eje-equipo">2022</span>
+                            </div>
+
+                            <!-- 2023 -->
+                            <div class="columna-equipo">
+                                <div class="barra-equipo-contenedor"
+                                     data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true"
+                                     data-bs-content="Smartphone: 95.5%<br>Común: 4.3%" data-bs-title="2023">
+                                    <div class="barra-equipo-sm" style="height: 95.5%;">
+                                        <span class="etiqueta-porcentaje-vertical" style="top: 20px; color: white;">95.5</span>
+                                        <span class="indicador-vertical inc" style="top: 15px; left: calc(50% + 15px);">▲</span>
+                                    </div>
+                                    <div class="barra-equipo-comun" style="height: 4.3%;">
+                                        <span class="etiqueta-porcentaje-vertical" style="top: -15px;">4.3</span>
+                                        <span class="indicador-vertical dec" style="top: -20px; left: calc(50% + 15px);">▼</span>
+                                    </div>
+                                </div>
+                                <span class="eje-equipo">2023</span>
+                            </div>
+                        </div>
+
+                        <!-- Leyenda -->
+                        <div class="pt-4 d-flex gap-4 justify-content-center">
+                            <span class="badge" style="background-color: #3b82f6;">Celular inteligente (smartphone)</span>
+                            <span class="badge" style="background-color: #ef4444;">Celular común</span>
+                        </div>
+                        <p class="text-end text-muted small pt-2 mb-0">
+                            Fuente: INEGI, ENDUTIH, 2020 a 2023.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 6: Tipo de servicio y Tipo de Uso (GRÁFICA DE BARRAS HORIZONTALES) -->
+        <div class="row g-4 mt-1">
+            <!-- Tipo de servicio (GRÁFICA CIRCULAR) -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Servicios Contratados en Hogares (2023)</h5>
+
+                        <div class="contenedor-grafica-circular">
+
+                            <!-- Gráfica Circular: 45% (Internet + TV) | 35% (Solo Internet) | 20% (Otros) -->
+                            <div class="grafica-circular-css grafica-circular-hogar">
+                                <div class="etiqueta-central">
+                                    Servicios<br>en Hogar
+                                </div>
+                            </div>
+
+                            <div class="leyenda-circular">
+                                <div class="leyenda-item">
+                                    <span class="color-muestra" style="background-color: #1e40af;"></span>
+                                    <span>**Internet y TV de Paga** (45%)</span>
+                                </div>
+                                <div class="leyenda-item">
+                                    <span class="color-muestra" style="background-color: #06b6d4;"></span>
+                                    <span>**Solo Internet** (35%)</span>
+                                </div>
+                                <div class="leyenda-item">
+                                    <span class="color-muestra" style="background-color: #64748b;"></span>
+                                    <span>**Otros Servicios** (20%)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-end text-muted small pt-2 mb-0">
+                            Fuente: Datos simulados para demostración (2023).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tipo de Uso (GRÁFICA DE BARRAS HORIZONTALES - NUEVA) -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Usos Principales del Teléfono Celular Inteligente (2023)</h5>
+
+                        <div class="contenedor-grafica-usos">
+
+                            <!-- Mensajería instantánea (91.2%) -->
+                            <div class="grupo-barra-uso-h">
+                                <span class="etiqueta-uso-h">Mensajería instantánea</span>
+                                <div class="barra-uso-contenedor-h">
+                                    <div class="barra-uso-h" style="width: 91.2%; background: linear-gradient(to right, #0f172a, #1e293b);">
+                                        <span class="valor-uso-h">91.2%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Acceder a redes sociales (78.3%) -->
+                            <div class="grupo-barra-uso-h">
+                                <span class="etiqueta-uso-h">Acceder a redes sociales</span>
+                                <div class="barra-uso-contenedor-h">
+                                    <div class="barra-uso-h" style="width: 78.3%; background: linear-gradient(to right, #0f172a, #1e293b);">
+                                        <span class="valor-uso-h">78.3%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Audio y video (77.7%) -->
+                            <div class="grupo-barra-uso-h">
+                                <span class="etiqueta-uso-h">Acceder a contenidos de audio y video</span>
+                                <div class="barra-uso-contenedor-h">
+                                    <div class="barra-uso-h" style="width: 77.7%; background: linear-gradient(to right, #0f172a, #1e293b);">
+                                        <span class="valor-uso-h">77.7%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tránsito y navegación (50.7%) -->
+                            <div class="grupo-barra-uso-h">
+                                <span class="etiqueta-uso-h">Tránsito y navegación asistida</span>
+                                <div class="barra-uso-contenedor-h">
+                                    <div class="barra-uso-h" style="width: 50.7%; background: linear-gradient(to right, #4c1d95, #6d28d9);">
+                                        <span class="valor-uso-h">50.7%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Adquirir bienes o servicios (33.9% ▲) -->
+                            <div class="grupo-barra-uso-h">
+                                <span class="etiqueta-uso-h">Adquirir bienes o servicios</span>
+                                <div class="barra-uso-contenedor-h">
+                                    <div class="barra-uso-h" style="width: 33.9%; background: linear-gradient(to right, #10b981, #34d399);">
+                                        <span class="valor-uso-h">33.9%<span class="indicador-uso-h inc">▲</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Jugar (33.3% ▼) -->
+                            <div class="grupo-barra-uso-h">
+                                <span class="etiqueta-uso-h">Jugar</span>
+                                <div class="barra-uso-contenedor-h">
+                                    <div class="barra-uso-h" style="width: 33.3%; background: linear-gradient(to right, #64748b, #94a3b8);">
+                                        <span class="valor-uso-h">33.3%<span class="indicador-uso-h dec">▼</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Acceder a banca móvil (31.9% ▲) -->
+                            <div class="grupo-barra-uso-h">
+                                <span class="etiqueta-uso-h">Acceder a banca móvil</span>
+                                <div class="barra-uso-contenedor-h">
+                                    <div class="barra-uso-h" style="width: 31.9%; background: linear-gradient(to right, #10b981, #34d399);">
+                                        <span class="valor-uso-h">31.9%<span class="indicador-uso-h inc">▲</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Editar fotos o videos (29.3% ▼) -->
+                            <div class="grupo-barra-uso-h">
+                                <span class="etiqueta-uso-h">Editar fotos o videos</span>
+                                <div class="barra-uso-contenedor-h">
+                                    <div class="barra-uso-h" style="width: 29.3%; background: linear-gradient(to right, #64748b, #94a3b8);">
+                                        <span class="valor-uso-h">29.3%<span class="indicador-uso-h dec">▼</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-end text-muted small pt-2 mb-0">
+                            Fuente: INEGI, ENDUTIH, 2023.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 7: Gasto Promedio (Mitad) y Tabla de Uso por Edad (Nueva Sección) -->
+        <div class="row g-4 mt-1 pb-4">
+            <!-- Gasto Promedio (Fila 7, Columna 1) -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Gasto Promedio en Telefonía Celular, Según Contrato (2020 vs 2023)</h5>
+                        <p class="text-muted small">
+                            Gasto promedio trimestral en pesos por usuario de teléfono celular (Incluye tiempo aire, paquetes, etc.).
+                        </p>
+
+                        <div class="contenedor-grafica-gasto">
+
+                            <!-- Prepago -->
+                            <div class="grupo-gasto">
+                                <div class="par-barras-gasto">
+                                    <!-- 2020: 176.5 (Cyan) -->
+                                    <div class="barra-gasto-2020" style="height: 120px; background: linear-gradient(to top, #06b6d4, #22d3ee);"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Gasto promedio: $176.5" data-bs-title="Prepago 2020">
+                                         <span class="etiqueta-gasto-valor">176.5</span>
+                                    </div>
+                                    <!-- 2023: 155.4 (Dark Blue) -->
+                                    <div class="barra-gasto-2023" style="height: 105px; background: linear-gradient(to top, #0f172a, #1e293b);"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Gasto promedio: $155.4" data-bs-title="Prepago 2023">
+                                         <span class="etiqueta-gasto-valor" style="color: white;">155.4</span>
+                                    </div>
+                                </div>
+                                <span class="eje-gasto-categoria">Prepago</span>
+                            </div>
+
+                            <!-- Pospago -->
+                            <div class="grupo-gasto">
+                                <div class="par-barras-gasto">
+                                    <!-- 2020: 498.3 (Cyan) -->
+                                    <div class="barra-gasto-2020" style="height: 250px; background: linear-gradient(to top, #06b6d4, #22d3ee);"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Gasto promedio: $498.3" data-bs-title="Pospago 2ef020">
+                                         <span class="etiqueta-gasto-valor">498.3</span>
+                                    </div>
+                                    <!-- 2023: 439.6 (Dark Blue) -->
+                                    <div class="barra-gasto-2023" style="height: 220px; background: linear-gradient(to top, #0f172a, #1e293b);"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Gasto promedio: $439.6" data-bs-title="Pospago 2023">
+                                         <span class="etiqueta-gasto-valor" style="color: white;">439.6</span>
+                                    </div>
+                                </div>
+                                <span class="eje-gasto-categoria">Pospago</span>
+                            </div>
+
+                            <!-- Ambos -->
+                            <div class="grupo-gasto">
+                                <div class="par-barras-gasto">
+                                    <!-- 2020: 481.4 (Cyan) -->
+                                    <div class="barra-gasto-2020" style="height: 240px; background: linear-gradient(to top, #06b6d4, #22d3ee);"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Gasto promedio: $481.4" data-bs-title="Ambos 2020">
+                                         <span class="etiqueta-gasto-valor">481.4</span>
+                                    </div>
+                                    <!-- 2023: 484.3 (Dark Blue) -->
+                                    <div class="barra-gasto-2023" style="height: 242px; background: linear-gradient(to top, #0f172a, #1e293b);"
+                                         data-bs-toggle="popover" data-bs-placement="top"
+                                         data-bs-content="Gasto promedio: $484.3" data-bs-title="Ambos 2023">
+                                         <span class="etiqueta-gasto-valor" style="color: white;">484.3</span>
+                                    </div>
+                                </div>
+                                <span class="eje-gasto-categoria">Ambos</span>
+                            </div>
+                        </div>
+
+                        <!-- Leyenda -->
+                        <div class="leyenda-gasto pt-4 d-flex gap-4 justify-content-center">
+                            <span class="badge" style="background-color: #06b6d4;">2020</span>
+                            <span class="badge" style="background-color: #0f172a;">2023</span>
+                        </div>
+                        <p class="text-end text-muted small pt-3 mb-0">
+                            Fuente: INEGI, ENDUTIH, 2020 y 2023.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla de Uso por Edad (Fila 7, Columna 2) -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Uso del Teléfono Celular por Grupo de Edad (2023)</h5>
+
+                        <div class="table-responsive">
+                             <table class="tabla-datos">
+                                <thead>
+                                    <tr>
+                                        <th>Tipo de Uso</th>
+                                        <th>12 a 17</th>
+                                        <th>25 a 34</th>
+                                        <th>45 a 54</th>
+                                        <th>55 y más</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mensajería instantánea</td>
+                                        <td class="alto-uso">97.5%</td>
+                                        <td class="alto-uso">96.0%</td>
+                                        <td class="alto-uso">90.1%</td>
+                                        <td class="medio-alto">75.2%</td>
+                                    </tr>
+                                     <tr>
+                                        <td>Redes Sociales</td>
+                                        <td class="alto-uso">95.1%</td>
+                                        <td class="alto-uso">88.4%</td>
+                                        <td class="medio-alto">69.3%</td>
+                                        <td class="bajo-uso">45.9%</td>
+                                    </tr>
+                                     <tr>
+                                        <td>Audio y Video</td>
+                                        <td class="alto-uso">92.0%</td>
+                                        <td class="alto-uso">85.1%</td>
+                                        <td class="medio-alto">68.9%</td>
+                                        <td class="muy-bajo">40.5%</td>
+                                    </tr>
+                                     <tr>
+                                        <td>Jugar</td>
+                                        <td class="medio-alto">58.9%</td>
+                                        <td class="muy-bajo">42.1%</td>
+                                        <td class="muy-bajo">24.5%</td>
+                                        <td class="muy-bajo">11.0%</td>
+                                    </tr>
+                                     <tr>
+                                        <td>Acceder a Banca Móvil</td>
+                                        <td class="muy-bajo">10.3%</td>
+                                        <td class="bajo-uso">48.9%</td>
+                                        <td class="muy-bajo">35.5%</td>
+                                        <td class="muy-bajo">22.1%</td>
+                                    </tr>
+                                </tbody>
+                             </table>
+                        </div>
+
+                        <p class="text-end text-muted small pt-3 mb-0">
+                            Fuente: Datos basados en ENDUTIH 2023, porcentajes simulados para demostración.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 8: Desglose de Internet por Estado (NUEVA SECCIÓN COMPLETA CON COLORES) -->
+        <div class="row g-4 mt-1 pb-5">
+            <div class="col-12">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Penetración de Internet por Entidad Federativa (2023)</h5>
+                        <p class="text-muted small">
+                            Porcentaje de población usuaria de internet por Estado. La penetración nacional es del <strong>71.7%</strong>.
+                        </p>
+
+                        <div class="table-responsive">
+                            <table class="tabla-estado-larga">
+                                <thead>
+                                    <tr>
+                                        <th>Entidad Federativa</th>
+                                        <th>Penetración (%)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="penet-alto"><td>Ciudad de México</td><td>89.5</td></tr>
+                                    <tr class="penet-alto"><td>Baja California</td><td>86.4</td></tr>
+                                    <tr class="penet-medio-alto"><td>Quintana Roo</td><td>83.6</td></tr>
+                                    <tr class="penet-medio-alto"><td>Jalisco</td><td>83.3</td></tr>
+                                    <tr class="penet-medio-alto"><td>Aguascalientes</td><td>81.4</td></tr>
+                                    <tr class="penet-medio-alto"><td>Sinaloa</td><td>81.4</td></tr>
+                                    <tr class="penet-medio"><td>Nuevo León</td><td>80.6</td></tr>
+                                    <tr class="penet-medio"><td>Sonora</td><td>80.3</td></tr>
+                                    <tr class="penet-medio"><td>Baja California Sur</td><td>78.9</td></tr>
+                                    <tr class="penet-medio"><td>Coahuila</td><td>76.9</td></tr>
+                                    <tr class="nacional"><td>NACIONAL</td><td>71.7</td></tr>
+                                    <tr class="penet-bajo"><td>Guanajuato</td><td>71.7</td></tr>
+                                    <tr class="penet-bajo"><td>Yucatán</td><td>70.6</td></tr>
+                                    <tr class="penet-muy-bajo"><td>Tabasco</td><td>68.3</td></tr>
+                                    <tr class="penet-muy-bajo"><td>Chiapas</td><td>44.3</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="text-end text-muted small pt-3 mb-0">
+                            Fuente: Datos basados en ENDUTIH, 2023.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS (para popovers y dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicializa todos los popovers en la página.
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl, {
+                    trigger: 'hover',
+                    html: true // Importante para renderizar el contenido
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matiliztli Metrics</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
+    <!-- Tu CSS externo -->
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body class="fondo-aplicacion">
+
+    <!-- Header reestructurado como Bootstrap Navbar con Toggler -->
+    <header class="bg-white border-bottom border-light shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light container-fluid px-4 px-sm-6 px-lg-8 py-2">
+            
+            <!-- Logo and Title (Brand) -->
+            <a class="navbar-brand p-0 d-flex align-items-center gap-3" href="#">
+                <div>
+                    <img src="src/img/logo.png" alt="Logo de Matiliztli Metrics" width="150" height="100" class="img-fluid" />
+                </div>
+            </a>
+
+            <!-- Toggler/Hamburger Menu Button (visible on mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links (Collapsible) -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav d-flex align-items-md-center gap-2 py-2 py-md-0">
+                    
+                    <!-- 1. INICIO -->
+                    <button class="btn btn-sm boton-menu-inactivo nav-item">
+                        <span>Inicio</span>  
+                    </button>
+                    
+                    <!-- 2. GRÁFICOS (Dropdown) -->
+                    <div class="nav-item dropdown">
+                        <button class="btn btn-sm boton-menu-inactivo dropdown-toggle enlace-activo" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>Gráficos</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item enlace-menu" href="internet.html">DISPONIBILIDAD Y USO DE INTERNET</a></li>
+                            <li><a class="dropdown-item enlace-menu" href="celulares.html">DISPONIBILIDAD Y USO DE TELÉFONO CELULAR</a></li>
+                            <li><a class="dropdown-item enlace-menu" href="dispositivos.html">DISPOSITIVOS INTELIGENTES EN LOS HOGARES</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 3. ACERCA DE -->
+                    <button class="btn btn-sm boton-menu-inactivo nav-item">
+                        <span>Acerca de</span>
+                    </button>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container-fluid px-4 px-sm-6 px-lg-8 py-4">
+        
+        <!-- TÍTULO PRINCIPAL DE SECCIÓN - CON ESTILO DE PÍLDORA -->
+        <div class="row mb-4 fila-titulo">
+            <div class="col-12">
+                <h2 class="titulo-seccion-pildora">Disponibilidad y Uso de Internet</h2>
+            </div>
+        </div>
+        
+        <!-- Fila 2: Usuarios de Internet Timeline (CSS Chart) - Estático -->
+        <div class="row mt-1">
+            <div class="col-12">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Evolución de Usuarios de Internet (2020 - 2023)</h5>
+                        <div id="usersTimelineChart" class="contenedor-grafica-usuarios">
+                            
+                            <!-- Barra 2020 -->
+                            <div class="grupo-barra-css">
+                                <div class="barra-css" style="height: 186px;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="75.2 Millones de usuarios (71.5%)" data-bs-title="2020">
+                                    <span class="etiqueta-barra-css">75.2M</span>
+                                </div>
+                                <span class="eje-barra-css">2020</span>
+                            </div>
+
+                            <!-- Barra 2021 -->
+                            <div class="grupo-barra-css">
+                                <div class="barra-css" style="height: 197px; background-color: #38a169;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="79.5 Millones de usuarios (75.6%)" data-bs-title="2021">
+                                    <span class="etiqueta-barra-css">79.5M</span>
+                                </div>
+                                <span class="eje-barra-css">2021</span>
+                            </div>
+
+                            <!-- Barra 2022 -->
+                            <div class="grupo-barra-css">
+                                <div class="barra-css" style="height: 210px; background-color: #3b82f6;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="85.0 Millones de usuarios (78.6%)" data-bs-title="2022">
+                                    <span class="etiqueta-barra-css">85.0M</span>
+                                </div>
+                                <span class="eje-barra-css">2022</span>
+                            </div>
+
+                            <!-- Barra 2023 -->
+                            <div class="grupo-barra-css">
+                                <div class="barra-css" style="height: 220px; background-color: #1e40af;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="89.1 Millones de usuarios (81.2%)" data-bs-title="2023">
+                                    <span class="etiqueta-barra-css">89.1M</span>
+                                </div>
+                                <span class="eje-barra-css">2023</span>
+                            </div>
+                        </div>
+                        <p class="text-end text-muted small pt-3 mb-0">Fuente de datos simulados: Encuesta Nacional 2020-2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 3: Comparación de Género y Urbano/Rural -->
+        <div class="row g-4 mt-1">
+            <!-- Pirámide de Género -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Comparación de Género por Edad (2023)</h5>
+                        <div class="contenedor-piramide-genero">
+                            
+                            <div class="fila-genero">
+                                <span class="etiqueta-eje-genero" style="text-align: right; color: #ef4444;">HOMBRES</span>
+                                <span class="etiqueta-eje-genero" style="width: 10px;"></span>
+                                <span class="etiqueta-eje-genero" style="text-align: left; color: #f97316;">MUJERES</span>
+                            </div>
+
+                            <!-- 6 a 11 años -->
+                            <div class="fila-genero">
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-izquierda">
+                                        <div class="segmento-barra-genero hombres" style="width: 69.9%;" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="69.9% de los hombres en este rango." data-bs-title="Hombres (6-11)">
+                                            <span class="valor-genero derecha">69.9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="etiqueta-eje-genero">6 a 11 años</span>
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-derecha">
+                                        <div class="segmento-barra-genero mujeres" style="width: 73.0%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="73.0% de las mujeres en este rango." data-bs-title="Mujeres (6-11)">
+                                            <span class="valor-genero izquierda">73.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 12 a 17 años -->
+                            <div class="fila-genero">
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-izquierda">
+                                        <div class="segmento-barra-genero hombres" style="width: 92.1%;" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="92.1% de los hombres en este rango." data-bs-title="Hombres (12-17)">
+                                            <span class="valor-genero derecha">92.1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="etiqueta-eje-genero">12 a 17 años</span>
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-derecha">
+                                        <div class="segmento-barra-genero mujeres" style="width: 92.6%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="92.6% de las mujeres en este rango." data-bs-title="Mujeres (12-17)">
+                                            <span class="valor-genero izquierda">92.6</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 18 a 24 años -->
+                            <div class="fila-genero">
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-izquierda">
+                                        <div class="segmento-barra-genero hombres" style="width: 96.7%;" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="96.7% de los hombres en este rango." data-bs-title="Hombres (18-24)">
+                                            <span class="valor-genero derecha">96.7</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="etiqueta-eje-genero">18 a 24 años</span>
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-derecha">
+                                        <div class="segmento-barra-genero mujeres" style="width: 96.7%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="96.7% de las mujeres en este rango." data-bs-title="Mujeres (18-24)">
+                                            <span class="valor-genero izquierda">96.7</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 25 a 34 años -->
+                            <div class="fila-genero">
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-izquierda">
+                                        <div class="segmento-barra-genero hombres" style="width: 94.4%;" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="94.4% de los hombres en este rango." data-bs-title="Hombres (25-34)">
+                                            <span class="valor-genero derecha">94.4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="etiqueta-eje-genero">25 a 34 años</span>
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-derecha">
+                                        <div class="segmento-barra-genero mujeres" style="width: 93.9%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="93.9% de las mujeres en este rango." data-bs-title="Mujeres (25-34)">
+                                            <span class="valor-genero izquierda">93.9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 35 a 44 años -->
+                            <div class="fila-genero">
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-izquierda">
+                                        <div class="segmento-barra-genero hombres" style="width: 88.9%;" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="88.9% de los hombres en este rango." data-bs-title="Hombres (35-44)">
+                                            <span class="valor-genero derecha">88.9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="etiqueta-eje-genero">35 a 44 años</span>
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-derecha">
+                                        <div class="segmento-barra-genero mujeres" style="width: 90.3%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="90.3% de las mujeres en este rango." data-bs-title="Mujeres (35-44)">
+                                            <span class="valor-genero izquierda">90.3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 45 a 54 años -->
+                            <div class="fila-genero">
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-izquierda">
+                                        <div class="segmento-barra-genero hombres" style="width: 81.3%;" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="81.3% de los hombres en este rango." data-bs-title="Hombres (45-54)">
+                                            <span class="valor-genero derecha">81.3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="etiqueta-eje-genero">45 a 54 años</span>
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-derecha">
+                                        <div class="segmento-barra-genero mujeres" style="width: 83.1%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="83.1% de las mujeres en este rango." data-bs-title="Mujeres (45-54)">
+                                            <span class="valor-genero izquierda">83.1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 55 a 64 años -->
+                            <div class="fila-genero">
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-izquierda">
+                                        <div class="segmento-barra-genero hombres" style="width: 67.4%;" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="67.4% de los hombres en este rango." data-bs-title="Hombres (55-64)">
+                                            <span class="valor-genero derecha">67.4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="etiqueta-eje-genero">55 a 64 años</span>
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-derecha">
+                                        <div class="segmento-barra-genero mujeres" style="width: 70.7%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="70.7% de las mujeres en este rango." data-bs-title="Mujeres (55-64)">
+                                            <span class="valor-genero izquierda">70.7</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 65 o más -->
+                            <div class="fila-genero">
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-izquierda">
+                                        <div class="segmento-barra-genero hombres" style="width: 41.8%;" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="41.8% de los hombres en este rango." data-bs-title="Hombres (65+)">
+                                            <span class="valor-genero derecha">41.8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="etiqueta-eje-genero">65 o más</span>
+                                <div class="area-barra-genero">
+                                    <div class="barra-genero-derecha">
+                                        <div class="segmento-barra-genero mujeres" style="width: 37.1%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="37.1% de las mujeres en este rango." data-bs-title="Mujeres (65+)">
+                                            <span class="valor-genero izquierda">37.1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="mt-3 text-muted">Porcentaje de población en cada grupo de edad con acceso a internet.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gráfico Urbano vs Rural -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Penetración Urbano vs. Rural (2020 - 2023)</h5>
+                        <div class="grafica-urbano-rural">
+                            <!-- 2020 -->
+                            <div class="par-barras">
+                                <div class="segmento-barra color-urbano" style="height: 183px;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración urbana: 78.2%" data-bs-title="2020 Urbano">
+                                    <span class="etiqueta-segmento-barra">78.2%</span>
+                                </div>
+                                <div class="segmento-barra color-rural" style="height: 120px;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración rural: 51.2%" data-bs-title="2020 Rural">
+                                    <span class="etiqueta-segmento-barra">51.2%</span>
+                                </div>
+                                <span class="etiqueta-par-barras">2020</span>
+                            </div>
+
+                            <!-- 2021 -->
+                            <div class="par-barras">
+                                <span class="indicador-incremento" style="left: 25%;">▲</span>
+                                <div class="segmento-barra color-urbano" style="height: 191px;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración urbana: 81.6% (▲)" data-bs-title="2021 Urbano">
+                                    <span class="etiqueta-segmento-barra">81.6%</span>
+                                </div>
+                                <div class="segmento-barra color-rural" style="height: 132px;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración rural: 56.5% (▲)" data-bs-title="2021 Rural">
+                                    <span class="etiqueta-segmento-barra">56.5%</span>
+                                    <span class="indicador-incremento" style="top: -30px; left: 75%;">▲</span>
+                                </div>
+                                <span class="etiqueta-par-barras">2021</span>
+                            </div>
+
+                            <!-- 2022 -->
+                            <div class="par-barras">
+                                <span class="indicador-incremento" style="left: 25%;">▲</span>
+                                <div class="segmento-barra color-urbano" style="height: 196px;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración urbana: 83.8% (▲)" data-bs-title="2022 Urbano">
+                                    <span class="etiqueta-segmento-barra">83.8%</span>
+                                </div>
+                                <div class="segmento-barra color-rural" style="height: 146px;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración rural: 62.3% (▲)" data-bs-title="2022 Rural">
+                                    <span class="etiqueta-segmento-barra">62.3%</span>
+                                    <span class="indicador-incremento" style="top: -30px; left: 75%;">▲</span>
+                                </div>
+                                <span class="etiqueta-par-barras">2022</span>
+                            </div>
+
+                            <!-- 2023 -->
+                            <div class="par-barras">
+                                <span class="indicador-incremento" style="left: 25%;">▲</span>
+                                <div class="segmento-barra color-urbano" style="height: 200px;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración urbana: 85.5% (▲)" data-bs-title="2023 Urbano">
+                                    <span class="etiqueta-segmento-barra">85.5%</span>
+                                </div>
+                                <div class="segmento-barra color-rural" style="height: 154px;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Penetración rural: 66.0% (▲)" data-bs-title="2023 Rural">
+                                    <span class="etiqueta-segmento-barra">66.0%</span>
+                                    <span class="indicador-incremento" style="top: -30px; left: 75%;">▲</span>
+                                </div>
+                                <span class="etiqueta-par-barras">2023</span>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <span class="badge" style="background-color: #059669;">Urbano</span>
+                            <span class="badge" style="background-color: #94a3b8;">Rural</span>
+                            <small class="text-muted ms-3">▲ Incremento estadísticamente significativo.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 4: Dispositivo Principal y Lugar de Acceso -->
+        <div class="row g-4 mt-1">
+            <!-- Dispositivo Principal -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Dispositivo Principal de Conexión (2023)</h5>
+                        <div class="contenedor-grafica-dispositivo">
+                            
+                            <div class="contenedor-barra-dispositivo">
+                                <span class="etiqueta-dispositivo">Smartphone</span>
+                                <div class="barra-dispositivo">
+                                    <div class="segmento-dispositivo smartphone" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Dispositivo Principal: 97.1%" data-bs-title="Smartphone"></div>
+                                    <span class="valor-dispositivo">97.1%</span>
+                                </div>
+                            </div>
+
+                            <div class="contenedor-barra-dispositivo">
+                                <span class="etiqueta-dispositivo">Computadora</span>
+                                <div class="barra-dispositivo">
+                                    <div class="segmento-dispositivo computadora" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Dispositivo Principal: 44.0%" data-bs-title="Computadora"></div>
+                                    <span class="valor-dispositivo">44.0%</span>
+                                </div>
+                            </div>
+
+                            <div class="contenedor-barra-dispositivo">
+                                <span class="etiqueta-dispositivo">Smart TV</span>
+                                <div class="barra-dispositivo">
+                                    <div class="segmento-dispositivo smart-tv" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Dispositivo Principal: 37.8%" data-bs-title="Smart TV"></div>
+                                    <span class="valor-dispositivo">37.8%</span>
+                                </div>
+                            </div>
+
+                            <div class="contenedor-barra-dispositivo">
+                                <span class="etiqueta-dispositivo">Consola</span>
+                                <div class="barra-dispositivo">
+                                    <div class="segmento-dispositivo consola" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Dispositivo Principal: 6.6%" data-bs-title="Consola"></div>
+                                    <span class="valor-dispositivo">6.6%</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p class="text-end text-muted small pt-2 mb-0">Nota: La suma supera el 100% por el uso de múltiples dispositivos.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lugar de Acceso -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Lugar Principal de Acceso (2023)</h5>
+                        <div class="contenedor-grafica-acceso">
+
+                            <div class="contenedor-barra-acceso">
+                                <span class="etiqueta-acceso">Hogar</span>
+                                <div class="barra-acceso">
+                                    <div class="segmento-acceso hogar" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Lugar de acceso principal: 95.2%" data-bs-title="Hogar"></div>
+                                    <span class="valor-acceso">95.2%</span>
+                                </div>
+                            </div>
+
+                            <div class="contenedor-barra-acceso">
+                                <span class="etiqueta-acceso">Conexión Móvil</span>
+                                <div class="barra-acceso">
+                                    <div class="segmento-acceso movil" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Lugar de acceso principal: 60.8%" data-bs-title="Conexión Móvil"></div>
+                                    <span class="valor-acceso">60.8%</span>
+                                </div>
+                            </div>
+
+                            <div class="contenedor-barra-acceso">
+                                <span class="etiqueta-acceso">Trabajo/Escuela</span>
+                                <div class="barra-acceso">
+                                    <div class="segmento-acceso trabajo" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Lugar de acceso principal: 41.6%" data-bs-title="Trabajo/Escuela"></div>
+                                    <span class="valor-acceso">41.6%</span>
+                                </div>
+                            </div>
+
+                            <div class="contenedor-barra-acceso">
+                                <span class="etiqueta-acceso">Sitio Público</span>
+                                <div class="barra-acceso">
+                                    <div class="segmento-acceso sitio" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Lugar de acceso principal: 22.2%" data-bs-title="Sitio Público"></div>
+                                    <span class="valor-acceso">22.2%</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p class="text-end text-muted small pt-2 mb-0">Nota: La suma supera el 100% debido al acceso múltiple.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 5: Actividades principales -->
+        <div class="row g-4 mt-1">
+            <div class="col-12">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Actividades Principales de Uso (2023)</h5>
+                        <div class="contenedor-grafica-uso contenedor-grafica-grande">
+
+                            <!-- Comunicarse -->
+                            <div class="grupo-barra-uso">
+                                <span class="etiqueta-uso">Comunicarse</span>
+                                <div class="envoltorio-barra">
+                                    <div class="barra-uso">
+                                        <div class="segmento-barra-uso urbano" style="width: 94.0%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Urbano: 94.0%" data-bs-title="Comunicarse">
+                                            <span class="valor-uso">94.0%</span>
+                                        </div>
+                                    </div>
+                                    <div class="barra-uso">
+                                        <div class="segmento-barra-uso rural" style="width: 90.5%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Rural: 90.5%" data-bs-title="Comunicarse">
+                                            <span class="valor-uso">90.5%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Redes sociales -->
+                            <div class="grupo-barra-uso">
+                                <span class="etiqueta-uso">Acceder a redes sociales</span>
+                                <div class="envoltorio-barra">
+                                    <div class="barra-uso">
+                                        <div class="segmento-barra-uso urbano" style="width: 92.0%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Urbano: 92.0%" data-bs-title="Acceder a redes sociales">
+                                            <span class="valor-uso">92.0%</span>
+                                        </div>
+                                    </div>
+                                    <div class="barra-uso">
+                                        <div class="segmento-barra-uso rural" style="width: 89.2%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Rural: 89.2%" data-bs-title="Acceder a redes sociales">
+                                            <span class="valor-uso">89.2%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Entretenimiento -->
+                            <div class="grupo-barra-uso">
+                                <span class="etiqueta-uso">Entretenimiento</span>
+                                <div class="envoltorio-barra">
+                                    <div class="barra-uso">
+                                        <div class="segmento-barra-uso urbano" style="width: 89.5%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Urbano: 89.5%" data-bs-title="Entretenimiento">
+                                            <span class="valor-uso">89.5%</span>
+                                        </div>
+                                    </div>
+                                    <div class="barra-uso">
+                                        <div class="segmento-barra-uso rural" style="width: 81.7%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Rural: 81.7%" data-bs-title="Entretenimiento">
+                                            <span class="valor-uso">81.7%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Buscar información -->
+                            <div class="grupo-barra-uso">
+                                <span class="etiqueta-uso">Buscar información</span>
+                                <div class="envoltorio-barra">
+                                    <div class="barra-uso">
+                                        <div class="segmento-barra-uso urbano" style="width: 89.2%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Urbano: 89.2%" data-bs-title="Buscar información">
+                                            <span class="valor-uso">89.2%</span>
+                                        </div>
+                                    </div>
+                                    <div class="barra-uso">
+                                        <div class="segmento-barra-uso rural" style="width: 80.8%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Rural: 80.8%" data-bs-title="Buscar información">
+                                            <span class="valor-uso">80.8%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Educación -->
+                            <div class="grupo-barra-uso">
+                                <span class="etiqueta-uso">Apoyar la capacitación o educación</span>
+                                <div class="envoltorio-barra">
+                                    <div class="barra-uso">
+                                        <div class="segmento-barra-uso urbano" style="width: 83.4%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Urbano: 83.4%" data-bs-title="Capacitación/Educación">
+                                            <span class="valor-uso">83.4%</span>
+                                        </div>
+                                    </div>
+                                    <div class="barra-uso">
+                                        <div class="segmento-barra-uso rural" style="width: 76.3%;" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Rural: 76.3%" data-bs-title="Capacitación/Educación">
+                                            <span class="valor-uso">76.3%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Leyenda -->
+                            <div class="pt-4 d-flex gap-4">
+                                <span class="badge" style="background-color: #059669;">Urbano</span>
+                                <span class="badge" style="background-color: #94a3b8;">Rural</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 6: Tipo de servicio y streaming -->
+        <div class="row g-4 mt-1">
+            <!-- Tipo de servicio -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Tipo de Servicio Contratado en Hogares (2022 vs 2023)</h5>
+                        <div class="contenedor-grafica-servicio">
+                            
+                            <!-- Internet -->
+                            <div class="grupo-barra-servicio">
+                                <div class="par-barra-servicio">
+                                    <div class="barra-servicio barra-servicio-2022" style="height: 96.3%;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="2022: 86.3%" data-bs-title="Internet">
+                                        <span class="etiqueta-barra-servicio">86.3</span>
+                                    </div>
+                                    <div class="barra-servicio barra-servicio-2023" style="height: 100.0%;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="2023: 89.6%" data-bs-title="Internet">
+                                        <span class="etiqueta-barra-servicio">89.6</span>
+                                    </div>
+                                </div>
+                                <span class="titulo-tipo-servicio">Internet</span>
+                            </div>
+
+                            <!-- TV de pago -->
+                            <div class="grupo-barra-servicio">
+                                <div class="par-barra-servicio">
+                                    <div class="barra-servicio barra-servicio-2022" style="height: 62.4%;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="2022: 55.9%" data-bs-title="TV de pago">
+                                        <span class="etiqueta-barra-servicio">55.9</span>
+                                    </div>
+                                    <div class="barra-servicio barra-servicio-2023" style="height: 58.6%;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="2023: 52.5%" data-bs-title="TV de pago">
+                                        <span class="etiqueta-barra-servicio">52.5</span>
+                                    </div>
+                                </div>
+                                <span class="titulo-tipo-servicio">TV de pago</span>
+                            </div>
+
+                            <!-- Telefonía fija -->
+                            <div class="grupo-barra-servicio">
+                                <div class="par-barra-servicio">
+                                    <div class="barra-servicio barra-servicio-2022" style="height: 58.7%;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="2022: 52.6%" data-bs-title="Telefonía fija">
+                                        <span class="etiqueta-barra-servicio">52.6</span>
+                                    </div>
+                                    <div class="barra-servicio barra-servicio-2023" style="height: 57.8%;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="2023: 51.8%" data-bs-title="Telefonía fija">
+                                        <span class="etiqueta-barra-servicio">51.8</span>
+                                    </div>
+                                </div>
+                                <span class="titulo-tipo-servicio">Telefonía fija</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 text-center">
+                            <span class="badge" style="background-color: #3b82f6;">2022</span>
+                            <span class="badge" style="background-color: #1e40af;">2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Streaming -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Uso de Servicios de Streaming (2023)</h5>
+                        <div class="contenedor-grafica-streaming">
+                            
+                            <div class="grupo-total-streaming" style="height: 100%;">
+                                <div class="barra-streaming" style="height: 152px;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Total hogares: 30.2% (11.6 millones)" data-bs-title="Streaming Total">
+                                    <span class="etiqueta-superior-streaming">30.2%</span>
+                                    <span class="etiqueta-inferior-streaming">11.6 millones</span>
+                                </div>
+                                <span class="eje-streaming">TOTAL</span>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-5">
+                                <span class="flecha-streaming">➡️</span>
+                            </div>
+
+                            <div class="grupo-desglose-streaming">
+                                <div class="barra-desglose-urbano" style="height: 100%;">
+                                    <div class="barra-streaming" style="height: 180px;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Urbano: 35.7% (10.9 millones)" data-bs-title="Ámbito Urbano">
+                                        <span class="etiqueta-superior-streaming">35.7%</span>
+                                        <span class="etiqueta-inferior-streaming" style="color: #0f172a;">10.9 millones</span>
+                                    </div>
+                                    <span class="eje-streaming">Urbano</span>
+                                </div>
+
+                                <div class="barra-desglose-rural" style="height: 100%;">
+                                    <div class="barra-streaming" style="height: 48px;" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Rural: 9.5% (0.8 millones)" data-bs-title="Ámbito Rural">
+                                        <span class="etiqueta-superior-streaming">9.5%</span>
+                                        <span class="etiqueta-inferior-streaming" style="color: #0f172a;">0.8 millones</span>
+                                    </div>
+                                    <span class="eje-streaming">Rural</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p class="text-end text-muted small pt-2 mb-0">Fuente: INEGI, ENDUTIH, 2023.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Fila 7: Tabla por estado -->
+        <div class="row mt-4 pb-5">
+            <div class="col-12">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Desglose por Estado: Hogares con Internet (2023)</h5>
+                        <p class="text-muted small">Porcentaje de hogares con acceso a internet, por Entidad Federativa. El porcentaje nacional es del <strong>71.7%</strong>.</p>
+
+                        <div class="distribucion-tablas-estado">
+                            
+                            <!-- Izquierda -->
+                            <div class="table-responsive">
+                                <table class="tabla-estados">
+                                    <thead>
+                                        <tr>
+                                            <th>Entidad Federativa</th>
+                                            <th class="col-penetracion">Penetración (%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="background-color: #d1fae5;">
+                                            <td class="col-estado">Ciudad de México</td>
+                                            <td class="col-penetracion alta">89.5 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Baja California</td>
+                                            <td class="col-penetracion alta">86.4</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Quintana Roo</td>
+                                            <td class="col-penetracion alta">83.6 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Jalisco</td>
+                                            <td class="col-penetracion media">83.3 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Aguascalientes</td>
+                                            <td class="col-penetracion media">81.4 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Sinaloa</td>
+                                            <td class="col-penetracion media">81.4</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Nuevo León</td>
+                                            <td class="col-penetracion media">80.6</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Sonora</td>
+                                            <td class="col-penetracion media">80.3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Baja California Sur</td>
+                                            <td class="col-penetracion media">78.9</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Coahuila de Zaragoza</td>
+                                            <td class="col-penetracion media">76.9 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Querétaro</td>
+                                            <td class="col-penetracion media">75.9</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Colima</td>
+                                            <td class="col-penetracion media">75.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Chihuahua</td>
+                                            <td class="col-penetracion media">74.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Morelos</td>
+                                            <td class="col-penetracion media">74.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Zacatecas</td>
+                                            <td class="col-penetracion media">73.9 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">México</td>
+                                            <td class="col-penetracion media">73.4</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Derecha -->
+                            <div class="table-responsive">
+                                <table class="tabla-estados">
+                                    <thead>
+                                        <tr>
+                                            <th>Entidad Federativa</th>
+                                            <th class="col-penetracion">Penetración (%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-estado">Tamaulipas</td>
+                                            <td class="col-penetracion media">73.2 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Guanajuato</td>
+                                            <td class="col-penetracion media">71.7 ▲</td>
+                                        </tr>
+                                        <tr style="background-color: #fce7b4;">
+                                            <td class="col-estado">
+                                                <span class="insignia-nacional">NACIONAL</span>
+                                            </td>
+                                            <td class="col-penetracion media">71.7 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Campeche</td>
+                                            <td class="col-penetracion media">70.9 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Yucatán</td>
+                                            <td class="col-penetracion media">70.6</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Nayarit</td>
+                                            <td class="col-penetracion baja">69.6 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Tabasco</td>
+                                            <td class="col-penetracion baja">68.3 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Michoacán de Ocampo</td>
+                                            <td class="col-penetracion baja">65.0 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Hidalgo</td>
+                                            <td class="col-penetracion baja">64.8 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Durango</td>
+                                            <td class="col-penetracion baja">64.7 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">San Luis Potosí</td>
+                                            <td class="col-penetracion baja">63.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Tlaxcala</td>
+                                            <td class="col-penetracion baja">62.7 ▲</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Puebla</td>
+                                            <td class="col-penetracion baja">58.3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Veracruz de Ignacio de la Llave</td>
+                                            <td class="col-penetracion baja">58.2</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Guerrero</td>
+                                            <td class="col-penetracion baja">53.9</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-estado">Oaxaca</td>
+                                            <td class="col-penetracion baja">53.0</td>
+                                        </tr>
+                                        <tr style="background-color: #fecaca;">
+                                            <td class="col-estado">Chiapas</td>
+                                            <td class="col-penetracion baja">44.3 ▲</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <p class="text-end text-muted small pt-3 mb-0">Fuente: INEGI, ENDUTIH, 2023. (▲ Incremento significativo respecto al año anterior).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl, {
+                    trigger: 'hover',
+                    html: true
+                });
+            });
+        });
+    </script>
+</body>
+</html>

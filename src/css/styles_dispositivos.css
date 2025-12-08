@@ -1,0 +1,586 @@
+/* ============================= */
+/* NOTA DE RENOMBRE DE CLASES   */
+/* ============================= */
+/* Antes -> Ahora
+   .card-big-value     -> .tarjeta-valor-grande
+   .big-value          -> .valor-grande
+   .card-narrow        -> .tarjeta-estrecha
+   .placeholder-content-> .contenido-placeholder
+   .table-custom-simple-> .tabla-simple
+*/
+
+/* Fondo general de la app */
+.fondo-aplicacion {
+    background-color: #f1f5f9;
+}
+
+/* Botones de menú */
+.boton-menu-inactivo {
+    color: #475569 !important;
+    background-color: transparent !important;
+    transition: all 0.2s ease-in-out;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 1.1rem;
+}
+.boton-menu-inactivo:hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+/* Enlace activo en navbar */
+.enlace-activo {
+    color: #1f2937 !important;
+    font-weight: 700;
+    position: relative;
+    background-color: transparent !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 1.1rem;
+}
+.enlace-activo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background-color: #1f2937;
+    border-radius: 9999px;
+}
+
+/* Dropdown de Bootstrap (NO cambiar nombre de clase) */
+.dropdown-menu {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de sección tipo píldora */
+.titulo-seccion-pildora {
+    background-color: #1f2937;
+    color: white !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.fila-titulo {
+    margin-bottom: 1rem !important;
+}
+
+/* Estilos generales de los apartados (por si los usas después) */
+.tarjeta-valor-grande {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.valor-grande {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1e40af;
+}
+.tarjeta-estrecha {
+    min-height: 200px;
+}
+.contenido-placeholder {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #cbd5e1;
+    border-radius: 0.375rem;
+    margin-top: 10px;
+}
+.tabla-simple {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tabla-simple th,
+.tabla-simple td {
+    padding: 8px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    font-size: 0.9rem;
+}
+.tabla-simple th {
+    background-color: #f8fafc;
+}
+
+/* ==================================== */
+/* ESTILOS GRÁFICA DE HOGARES CON COMPUTADORA (Fila 1) */
+/* ==================================== */
+.contenedor-grafica-barra {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 300px;
+    padding: 20px 0;
+    gap: 40px;
+    border-bottom: 2px solid #000;
+    position: relative;
+}
+.grupo-barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 120px;
+    position: relative;
+    height: 100%;
+    justify-content: flex-end;
+}
+.barra-valor {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.barra-valor:hover {
+    opacity: 0.9;
+    transform: translateY(-5px) scale(1.01);
+}
+
+/* Colores barras hogares con computadora */
+.bar-2020 { background: linear-gradient(to top, #06b6d4, #22d3ee); }
+.bar-2021 { background: linear-gradient(to top, #0ea5e9, #38bdf8); }
+.bar-2022 { background: linear-gradient(to top, #0077b6, #0096c7); }
+.bar-2023 { background: linear-gradient(to top, #03045e, #001f3f); }
+
+/* Etiqueta superior */
+.etiqueta-superior {
+    position: absolute;
+    top: -25px;
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* Indicador de incremento (triángulo verde) */
+.indicador-incremento {
+    position: absolute;
+    top: -25px;
+    right: -15px;
+    color: #10b981;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+/* Etiqueta inferior dentro de la barra */
+.etiqueta-inferior {
+    position: absolute;
+    bottom: 15px;
+    font-weight: 600;
+    color: white;
+    font-size: 1.0rem;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Etiqueta de año (eje X) */
+.eje-anual {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ==================================== */
+/* ESTILOS GRÁFICA EQUIPOS POR HOGAR (Apartado 2) */
+/* ==================================== */
+.contenedor-grafica-equipo-h {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 10px 5px;
+}
+.barra-equipo-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.etiqueta-equipo-h {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+.barra-principal-h {
+    height: 35px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.barra-valor-h {
+    height: 100%;
+    background-color: #008080;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    transition: width 0.5s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.barra-valor-h.rojo {
+    background-color: #ef4444;
+}
+.etiqueta-centro-h {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+.etiqueta-lado-h {
+    position: absolute;
+    right: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e293b;
+    padding-left: 10px;
+}
+.indicador-h {
+    font-size: 0.7rem;
+    font-weight: 900;
+    color: #10b981;
+    margin-left: 5px;
+}
+.indicador-h.dec {
+    color: #ef4444;
+}
+
+/* ==================================== */
+/* ESTILOS GRÁFICA DISPOSITIVOS INTELIGENTES (Apartado 3) */
+/* ==================================== */
+.contenedor-grafica-dispositivos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 0;
+}
+.dispositivo-barra-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.dispositivo-etiqueta {
+    flex-shrink: 0;
+    width: 130px;
+    font-size: 0.85rem;
+    color: #334155;
+    text-align: right;
+    font-weight: 500;
+}
+.dispositivo-barra-fondo {
+    flex-grow: 1;
+    height: 22px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    position: relative;
+}
+.dispositivo-barra-valor {
+    height: 100%;
+    background-color: #1e40af;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+}
+.dispositivo-valor {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+.dispositivo-porcentaje-fuera {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1e40af;
+    flex-shrink: 0;
+    width: 40px;
+    text-align: right;
+}
+
+/* ==================================== */
+/* ESTILOS GRÁFICA APILADA CELULAR COMÚN (Apartado 5) */
+/* ==================================== */
+.contenedor-grafica-apilada {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 250px;
+    padding: 10px 5px 30px 5px;
+    border-bottom: 2px solid #0f172a;
+    position: relative;
+}
+.barra-apilada-columna {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    max-width: 40px;
+    height: 100%;
+    justify-content: flex-end;
+    position: relative;
+}
+.barra-segmento {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease;
+}
+.barra-segmento-sm {
+    background-color: #0d9488;
+    border-radius: 0 0 4px 4px;
+}
+.barra-segmento-comun {
+    background-color: #ef4444;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+.etiqueta-segmento-valor {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.etiqueta-columna-anual {
+    font-size: 0.9rem;
+    color: #1f2937;
+    margin-top: 5px;
+    font-weight: 600;
+}
+.indicador-apilado {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    font-size: 0.7rem;
+    font-weight: 900;
+    z-index: 10;
+}
+.indicador-apilado.inc { color: #10b981; }
+.indicador-apilado.dec { color: #facc15; }
+
+/* ==================================== */
+/* ESTILOS GRÁFICA CIRCULAR DE TV (Apartado 6 y 10) */
+/* ==================================== */
+.contenedor-grafica-circular {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px 10px;
+    min-height: 250px;
+    flex-wrap: wrap;
+}
+.grafica-circular-css {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.grafica-circular-tv {
+    --t1: 68.7%;
+    --t2: 30.8%;
+    --t3: 0.6%;
+    background:
+        conic-gradient(
+            #0d9488 0% var(--t1),
+            #03045e var(--t1) calc(var(--t1) + var(--t2)),
+            #ef4444 calc(var(--t1) + var(--t2)) 100%
+        );
+}
+.etiqueta-central-tv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.leyenda-circular-tv {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1rem;
+}
+.leyenda-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.color-muestra {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+/* ==================================== */
+/* ESTILOS TABLA GRANDE POR ESTADO (Apartado 7) */
+/* ==================================== */
+.tabla-estado-larga {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 15px;
+}
+.tabla-estado-larga th,
+.tabla-estado-larga td {
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+.tabla-estado-larga th {
+    background-color: #1e40af;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.tabla-estado-larga td:last-child {
+    font-weight: 700;
+    text-align: right;
+    padding-right: 20px;
+}
+.tabla-estado-larga .nacional {
+    background-color: #fef08a;
+    font-weight: 700;
+    color: #f97316;
+}
+.tabla-estado-larga .incremento {
+    color: #10b981;
+    font-weight: 900;
+    margin-left: 5px;
+}
+
+/* Distribución en dos columnas para tablets/desktop */
+.distribucion-tablas-estado {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+@media (min-width: 768px) {
+    .distribucion-tablas-estado {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Colores de fila por nivel de penetración */
+.penet-alto { background-color: #d1fae5; }
+.penet-medio-alto { background-color: #dbeafe; }
+.penet-medio { background-color: #ede9fe; }
+.penet-bajo { background-color: #fef3c7; }
+.penet-muy-bajo { background-color: #fee2e2; }
+
+/* ==================================== */
+/* ESTILOS GRÁFICA TV ABIERTA (Apartado 11) */
+/* ==================================== */
+.contenedor-grafica-tv-abierta {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 300px;
+    padding: 20px 0;
+    gap: 40px;
+    border-bottom: 2px solid #0f172a;
+    position: relative;
+}
+.grupo-barra-abierta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 80px;
+    position: relative;
+    height: 100%;
+    justify-content: flex-end;
+}
+.barra-abierta-valor {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.barra-abierta-valor:hover {
+    opacity: 0.9;
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* Colores para TV Abierta */
+.bar-abierta-clara {
+    background: linear-gradient(to top, #06b6d4, #22d3ee);
+}
+.bar-abierta-oscura {
+    background: linear-gradient(to top, #004d99, #0077b6);
+}
+.etiqueta-superior-abierta {
+    position: absolute;
+    top: -25px;
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+}
+.etiqueta-inferior-abierta {
+    position: absolute;
+    bottom: 10px;
+    font-weight: 600;
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+.indicador-abierta {
+    position: absolute;
+    top: -25px;
+    right: -15px;
+    color: #ef4444;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+.eje-anual-abierta {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: 500;
+}

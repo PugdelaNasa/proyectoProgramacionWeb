@@ -1,0 +1,730 @@
+/* Fondo general de la app */
+.fondo-aplicacion {
+    background-color: #f1f5f9; /* Simula bg-gradient-to-br from-slate-50 to-slate-100 */
+}
+
+/* Botones de menú */
+.boton-menu-inactivo {
+    color: #475569 !important;
+    background-color: transparent !important;
+    transition: all 0.2s ease-in-out;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 1.1rem;
+}
+
+.boton-menu-inactivo:hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+/* Enlace activo en navbar */
+.enlace-activo {
+    color: #1f2937 !important;
+    font-weight: 700;
+    position: relative;
+    background-color: transparent !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 1.1rem;
+}
+
+.enlace-activo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background-color: #1f2937;
+    border-radius: 9999px;
+}
+
+/* Enlaces de menú en dropdown */
+.enlace-menu {
+    color: #475569 !important;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.enlace-menu:hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+/* Dropdown de Bootstrap (solo estilos visuales) */
+.dropdown-menu {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de sección tipo píldora */
+.titulo-seccion-pildora {
+    background-color: #1f2937;
+    color: white !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.fila-titulo {
+    margin-bottom: 1rem !important;
+}
+
+/* Estilo de marcador de posición para gráficas eliminadas */
+.placeholder-grafica {
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #e2e8f0;
+    border-radius: 8px;
+    color: #94a3b8;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ==================================== */
+/* ESTILOS DE LA GRÁFICA DE CELULAR (Fila 3) */
+/* ==================================== */
+.contenedor-grafica-celular {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 250px;
+    padding: 10px 0;
+    gap: 15px;
+    border-bottom: 2px solid #e2e8f0;
+    position: relative;
+}
+
+.grupo-barra-celular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 80px;
+    position: relative;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.barra-celular {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barra-celular:hover {
+    opacity: 0.9;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Etiqueta de porcentaje (arriba) */
+.etiqueta-celular-superior {
+    position: absolute;
+    top: -20px;
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* Indicador de incremento (triángulo verde) */
+.indicador-celular-incremento {
+    position: absolute;
+    top: -25px;
+    right: -15px;
+    color: #10b981; /* Verde fuerte */
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+/* Etiqueta de cantidad absoluta (abajo, dentro de la barra) */
+.etiqueta-celular-inferior {
+    position: absolute;
+    bottom: 10px;
+    font-weight: 600;
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Etiqueta de año (eje X) */
+.eje-celular {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ==================================== */
+/* ESTILOS GRÁFICA GÉNERO HORIZONTAL (Fila 4, Col 1) */
+/* ==================================== */
+.contenedor-grafica-genero-horizontal {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 0 30px 0;
+}
+
+.fila-barra-genero {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+
+.etiqueta-fila-genero {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 5px;
+}
+
+.barra-contenedor-total {
+    height: 30px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.barra-genero-h,
+.barra-genero-m {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    transition: width 0.5s ease;
+    cursor: pointer;
+}
+
+.barra-genero-h {
+    /* COLOR Hombres: Azul Morado */
+    background: linear-gradient(to right, #4338ca, #6366f1);
+    justify-content: flex-end;
+    padding-right: 10px;
+    box-shadow: inset -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.barra-genero-m {
+    /* COLOR Mujeres: Rosa Naranja */
+    background: linear-gradient(to right, #db2777, #f472b6);
+    justify-content: flex-start;
+    padding-left: 10px;
+    box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.valor-genero-horizontal {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+
+.indicador-genero-incremento {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #10b981;
+    font-size: 0.75rem;
+    font-weight: 900;
+    z-index: 3;
+}
+
+.indicador-genero-incremento.h {
+    right: -15px;
+}
+
+.indicador-genero-incremento.m {
+    left: -15px;
+}
+
+.leyenda-genero {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* ==================================== */
+/* ESTILOS GRÁFICA CIRCULAR (General) */
+/* ==================================== */
+.contenedor-grafica-circular {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px 10px;
+    min-height: 250px;
+    flex-wrap: wrap;
+}
+
+.grafica-circular-css {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para la gráfica de Conexión a Internet en Celulares */
+.grafica-circular-conexion {
+    /* Datos: 74.3% (Móvil) | 13.1% (WiFi) | 12.6% (Ambos) */
+    --p1: 74.3%; /* Solo conexión móvil (AZUL PRIMARIO) */
+    --p2: 13.1%; /* Solo wifi (AMARILLO) */
+    --p3: 12.6%; /* Ambos (VERDE) */
+
+    background: conic-gradient(
+        #0ea5e9 0% var(--p1),
+        #facc15 var(--p1) calc(var(--p1) + var(--p2)),
+        #10b981 calc(var(--p1) + var(--p2)) 100%
+    );
+}
+
+/* Estilos específicos para la gráfica de Servicios en Hogares */
+.grafica-circular-hogar {
+    /* Datos: 45% (Internet+TV) | 35% (Solo Internet) | 20% (Otros) */
+    --h1: 45%; /* Internet + TV (AZUL OSCURO) */
+    --h2: 35%; /* Solo Internet (CYAN) */
+
+    background: conic-gradient(
+        #1e40af 0% var(--h1),
+        #06b6d4 var(--h1) calc(var(--h1) + var(--h2)),
+        #64748b calc(var(--h1) + var(--h2)) 100%
+    );
+}
+
+.etiqueta-central {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 0.9rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.leyenda-circular {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.leyenda-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.color-muestra {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+/* ==================================== */
+/* ESTILOS GRÁFICA TIPO DE EQUIPO (Fila 5) */
+/* ==================================== */
+.contenedor-grafica-equipo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 350px;
+    padding: 20px 10px;
+    gap: 20px;
+    border-bottom: 2px solid #e2e8f0;
+    position: relative;
+}
+
+.columna-equipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 80px;
+    height: 100%;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.barra-equipo-contenedor {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.barra-equipo-contenedor:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+}
+
+.barra-equipo-sm,
+.barra-equipo-comun {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: white;
+    position: relative;
+}
+
+.barra-equipo-sm {
+    background-color: #3b82f6; /* Azul primario */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.barra-equipo-comun {
+    background-color: #ef4444; /* Rojo */
+    z-index: 2;
+}
+
+.etiqueta-porcentaje-vertical {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    white-space: nowrap;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+}
+
+.indicador-vertical {
+    position: absolute;
+    right: 0px;
+    font-size: 0.7rem;
+    font-weight: 900;
+}
+
+.indicador-vertical.inc {
+    color: #10b981;
+}
+
+.indicador-vertical.dec {
+    color: #ef4444;
+}
+
+.eje-equipo {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ==================================== */
+/* ESTILOS GRÁFICA USOS HORIZONTAL (Fila 6, Col 2) */
+/* ==================================== */
+.contenedor-grafica-usos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+    min-height: 400px;
+    justify-content: space-around;
+}
+
+.grupo-barra-uso-h {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.etiqueta-uso-h {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.barra-uso-contenedor-h {
+    height: 25px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.barra-uso-h {
+    height: 100%;
+    /* Azul oscuro para usos altos, Gris para usos bajos */
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    transition: width 0.5s ease;
+    cursor: pointer;
+}
+
+.barra-uso-h.secundario {
+    background: linear-gradient(to right, #64748b, #94a3b8); /* Usos secundarios/juegos */
+}
+
+.valor-uso-h {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 3;
+}
+
+.indicador-uso-h {
+    position: absolute;
+    right: -15px;
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+
+.indicador-uso-h.inc {
+    color: #10b981;
+}
+
+.indicador-uso-h.dec {
+    color: #ef4444;
+}
+
+/* ==================================== */
+/* ESTILOS GRÁFICA GASTO AGRUPADO (Fila 7, Col 1) */
+/* ==================================== */
+.contenedor-grafica-gasto {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 300px; /* Altura del gráfico */
+    padding: 20px 10px 40px 10px;
+    gap: 20px;
+    border-bottom: 2px solid #e2e8f0;
+    position: relative;
+}
+
+.grupo-gasto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100px;
+    height: 100%;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.par-barras-gasto {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.barra-gasto-2020,
+.barra-gasto-2023 {
+    width: 45%;
+    margin: 0 2.5%;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: height 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.barra-gasto-2020 {
+    background-color: #06b6d4; /* Cyan - 2020 */
+}
+
+.barra-gasto-2023 {
+    background-color: #0f172a; /* Dark Blue - 2023 */
+}
+
+.etiqueta-gasto-valor {
+    position: absolute;
+    top: -20px;
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+}
+
+.eje-gasto-categoria {
+    position: absolute;
+    bottom: -30px;
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+.leyenda-gasto {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* ==================================== */
+/* ESTILOS TABLA DE DATOS POR EDAD (Fila 7, Col 2) */
+/* ==================================== */
+.tabla-datos {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 15px;
+}
+
+.tabla-datos th,
+.tabla-datos td {
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla-datos th {
+    background-color: #6d28d9; /* Morado */
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tabla-datos thead th:first-child {
+    text-align: left;
+}
+
+.tabla-datos tbody td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.tabla-datos tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.tabla-datos tr:last-child td {
+    border-bottom: none;
+}
+
+/* Colores de calor por celda (ejemplos) */
+.alto-uso {
+    color: #059669;
+    font-weight: 700;
+}
+
+.medio-alto {
+    color: #3b82f6;
+}
+
+.bajo-uso {
+    color: #f97316;
+}
+
+.muy-bajo {
+    color: #ef4444;
+}
+
+/* ==================================== */
+/* ESTILOS TABLA GRANDE POR ESTADO (NUEVA FILA 8) */
+/* ==================================== */
+
+/* Definición de clases de color de fila basadas en penetración */
+.penet-alto {
+    background-color: #d1fae5; /* Verde claro - 85.1+ */
+}
+
+.penet-medio-alto {
+    background-color: #dbeafe; /* Azul pálido - 80.1-85.0 */
+}
+
+.penet-medio {
+    background-color: #ede9fe; /* Morado pálido - 75.1-80.0 */
+}
+
+.penet-bajo {
+    background-color: #fef3c7; /* Amarillo muy claro - 70.1-75.0 */
+}
+
+.penet-muy-bajo {
+    background-color: #fee2e2; /* Rojo muy claro - < 70.0 */
+}
+
+.tabla-estado-larga {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 15px;
+}
+
+.tabla-estado-larga th,
+.tabla-estado-larga td {
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla-estado-larga th {
+    background-color: #1e40af; /* Azul oscuro */
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tabla-estado-larga td:last-child {
+    font-weight: 700;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.tabla-estado-larga .nacional {
+    background-color: #fef08a; /* Amarillo para Nacional */
+    font-weight: 700;
+    color: #f97316;
+}
