@@ -1,0 +1,94 @@
+/* Fondo general de la app */
+.fondo-aplicacion {
+    background-color: #f1f5f9; /* Simula bg-gradient-to-br from-slate-500 to-slate-100 */
+}
+
+/* Botones de menú */
+.boton-menu-inactivo {
+    color: #475569 !important;
+    background-color: transparent !important;
+    transition: all 0.2s ease-in-out;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 1.1rem;
+}
+
+.boton-menu-inactivo:hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+/* Enlace activo en navbar */
+.enlace-activo {
+    color: #1f2937 !important;
+    font-weight: 700;
+    position: relative;
+    background-color: transparent !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 1.1rem;
+}
+
+.enlace-activo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background-color: #1f2937;
+    border-radius: 9999px;
+}
+
+/* Dropdown de Bootstrap (solo estilos visuales) */
+.dropdown-menu {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de sección tipo píldora - ESTILOS MODIFICADOS */
+.titulo-seccion-pildora {
+    background-color: transparent; /* Fondo transparente */
+    color: #0f172a !important;   /* Texto negro/azul oscuro */
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    display: block; /* Para que ocupe todo el ancho */
+    font-size: 2.5rem; /* Más grande */
+    font-weight: 800; /* Más grueso */
+    margin-bottom: 0 !important;
+    box-shadow: none; /* Eliminar sombra */
+    text-align: center; /* Centrado */
+}
+
+.fila-titulo {
+    margin-bottom: 1rem !important;
+}
+
+/* Estilos específicos para el formulario de contacto */
+.contacto-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.contacto-box h3 {
+    color: #1e40af;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.btn-enviar {
+    background-color: #1e40af;
+    border: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #0f172a;
+}

@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matiliztli Metrics</title>
-
-    <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-
-    <!-- Hoja de estilos propia -->
     <link rel="stylesheet" href="src/css/styles_celular.css">
 </head>
 <body class="fondo-aplicacion">
 
-    <!-- Header como Navbar -->
+    <!-- Navbar -->
     <header class="bg-white border-bottom border-light shadow-sm">
         <nav class="navbar navbar-expand-md navbar-light container-fluid px-4 px-sm-6 px-lg-8 py-2">
             <a class="navbar-brand p-0 d-flex align-items-center gap-3" href="#">
@@ -48,15 +44,14 @@
                         </ul>
                     </div>
 
-                    <button class="btn btn-sm boton-menu-inactivo nav-item">
-                        <span>Acerca de</span>
+                    <button class="btn btn-sm boton-menu-inactivo nav-item" onclick="window.location.href='contacto.html'">
+                        <span>Contacto</span>
                     </button>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="container-fluid px-4 px-sm-6 px-lg-8 py-4">
         <!-- Título -->
         <div class="row mb-4 fila-titulo">
@@ -65,7 +60,7 @@
             </div>
         </div>
 
-        <!-- Fila 3: Gráfica de Teléfono Celular (Ocupa todo el ancho) -->
+        <!-- Gráfica de Teléfono Celular (Ocupa todo el ancho) -->
         <div class="row g-4 mt-1">
             <div class="col-12">
                 <div class="card shadow-sm border-0 rounded-3">
@@ -122,16 +117,14 @@
                             Fuente: INEGI, ENDUTIH, 2020 a 2023.
                         </p>
                         <p class="text-muted small mt-2">
-                             <span style="color: #10b981;">▲</span> Incremento estadísticamente significativo respecto al año anterior.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Fila 4: Género por Sexo (GRÁFICA CSS) y Conexión a Internet (GRÁFICA CIRCULAR) -->
+        <!-- Género por Sexo y Conexión a Internet  -->
         <div class="row g-4 mt-1">
-            <!-- Género por Sexo (GRÁFICA CSS) -->
             <div class="col-12 col-lg-6">
                 <div class="card shadow-sm border-0 rounded-3">
                     <div class="card-body">
@@ -212,14 +205,11 @@
                             <span class="badge" style="background-color: #6366f1;">Hombres</span>
                             <span class="badge" style="background-color: #f472b6;">Mujeres</span>
                         </div>
-                        <p class="text-end text-muted small pt-2 mb-0">
-                            Fuente: INEGI, ENDUTIH, 2020 a 2023.
-                        </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Lugar de acceso (GRÁFICA CIRCULAR) - CORREGIDA -->
+            <!-- GRAFICA CIRCULO TIPO CONEXICON -->
             <div class="col-12 col-lg-6">
                 <div class="card shadow-sm border-0 rounded-3">
                     <div class="card-body">
@@ -248,15 +238,12 @@
                             </div>
                         </div>
 
-                        <p class="text-end text-muted small pt-2 mb-0">
-                            Fuente: INEGI, ENDUTIH, 2023.
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Fila 5: Tipo de Equipo Celular (GRÁFICA CSS) -->
+        <!-- Tipo de Equipo Celular  -->
         <div class="row g-4 mt-1">
             <div class="col-12">
                 <div class="card shadow-sm border-0 rounded-3">
@@ -339,17 +326,13 @@
                             <span class="badge" style="background-color: #3b82f6;">Celular inteligente (smartphone)</span>
                             <span class="badge" style="background-color: #ef4444;">Celular común</span>
                         </div>
-                        <p class="text-end text-muted small pt-2 mb-0">
-                            Fuente: INEGI, ENDUTIH, 2020 a 2023.
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Fila 6: Tipo de servicio y Tipo de Uso (GRÁFICA DE BARRAS HORIZONTALES) -->
+        <!-- Tipo de servicio y Tipo de Uso (GRÁFICA DE BARRAS HORIZONTALES) -->
         <div class="row g-4 mt-1">
-            <!-- Tipo de servicio (GRÁFICA CIRCULAR) -->
             <div class="col-12 col-lg-6">
                 <div class="card shadow-sm border-0 rounded-3">
                     <div class="card-body">
@@ -357,7 +340,7 @@
 
                         <div class="contenedor-grafica-circular">
 
-                            <!-- Gráfica Circular: 45% (Internet + TV) | 35% (Solo Internet) | 20% (Otros) -->
+                            <!-- Gráfica Circular: 45% (Internet + TV) / 35% (Solo Internet) /20% (Otros) -->
                             <div class="grafica-circular-css grafica-circular-hogar">
                                 <div class="etiqueta-central">
                                     Servicios<br>en Hogar
@@ -380,14 +363,11 @@
                             </div>
                         </div>
 
-                        <p class="text-end text-muted small pt-2 mb-0">
-                            Fuente: Datos simulados para demostración (2023).
-                        </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Tipo de Uso (GRÁFICA DE BARRAS HORIZONTALES - NUEVA) -->
+            <!-- Tipo de Uso  -->
             <div class="col-12 col-lg-6">
                 <div class="card shadow-sm border-0 rounded-3">
                     <div class="card-body">
@@ -455,7 +435,7 @@
                                 </div>
                             </div>
 
-                            <!-- Acceder a banca móvil (31.9% ▲) -->
+                            <!-- Acceder a banca móvil (31.9% ▲) --> 
                             <div class="grupo-barra-uso-h">
                                 <span class="etiqueta-uso-h">Acceder a banca móvil</span>
                                 <div class="barra-uso-contenedor-h">
@@ -476,17 +456,13 @@
                             </div>
                         </div>
 
-                        <p class="text-end text-muted small pt-2 mb-0">
-                            Fuente: INEGI, ENDUTIH, 2023.
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Fila 7: Gasto Promedio (Mitad) y Tabla de Uso por Edad (Nueva Sección) -->
+        <!-- Gasto Promedio (Mitad) y Tabla de Uso por Edad (Nueva Sección) -->
         <div class="row g-4 mt-1 pb-4">
-            <!-- Gasto Promedio (Fila 7, Columna 1) -->
             <div class="col-12 col-lg-6">
                 <div class="card shadow-sm border-0 rounded-3">
                     <div class="card-body">
@@ -560,14 +536,11 @@
                             <span class="badge" style="background-color: #06b6d4;">2020</span>
                             <span class="badge" style="background-color: #0f172a;">2023</span>
                         </div>
-                        <p class="text-end text-muted small pt-3 mb-0">
-                            Fuente: INEGI, ENDUTIH, 2020 y 2023.
-                        </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Tabla de Uso por Edad (Fila 7, Columna 2) -->
+            <!-- Tabla de Uso por Edad  -->
             <div class="col-12 col-lg-6">
                 <div class="card shadow-sm border-0 rounded-3">
                     <div class="card-body">
@@ -624,15 +597,12 @@
                              </table>
                         </div>
 
-                        <p class="text-end text-muted small pt-3 mb-0">
-                            Fuente: Datos basados en ENDUTIH 2023, porcentajes simulados para demostración.
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Fila 8: Desglose de Internet por Estado (NUEVA SECCIÓN COMPLETA CON COLORES) -->
+        <!-- Desglose de Internet por Estado -->
         <div class="row g-4 mt-1 pb-5">
             <div class="col-12">
                 <div class="card shadow-sm border-0 rounded-3">
@@ -670,16 +640,14 @@
                             </table>
                         </div>
 
-                        <p class="text-end text-muted small pt-3 mb-0">
-                            Fuente: Datos basados en ENDUTIH, 2023.
-                        </p>
+
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Bootstrap JS (para popovers y dropdowns) -->
+    <!-- Bootstrap POPOVERS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
